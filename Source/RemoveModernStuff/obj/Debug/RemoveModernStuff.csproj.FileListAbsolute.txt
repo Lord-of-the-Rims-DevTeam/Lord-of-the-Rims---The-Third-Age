@@ -1,0 +1,16 @@
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\RemoveModernStuff.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\RemoveModernStuff.pdb
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\Assembly-CSharp.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\UnityEngine.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\TextMeshPro-1.0.55.56.0b11.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\NAudio.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\NVorbis.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\bin\Debug\UnityEngine.UI.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.csprojResolveAssemblyReference.cache
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.csproj.CoreCompileInputs.cache
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.dll
+C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Assemblies\RemoveModernStuff.dll
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Assemblies\RemoveModernStuff.dll
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.dll

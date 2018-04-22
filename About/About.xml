@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Lord of the Rims - The Third Age</name>
+  <author>erdelf and Jecrell</author>
+  <targetVersion>0.18.0</targetVersion>
+  <description>
+    Removes modern items.
+	Adds a blacksmith forge and anvil.
+	Adds iron and mithril.
+  </description>
+</ModMetaData>

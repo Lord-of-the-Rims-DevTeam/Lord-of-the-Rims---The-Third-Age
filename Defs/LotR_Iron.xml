@@ -3,6 +3,52 @@
 
   <!--================== Bases ==================-->
   
+  
+  <ThingDef Name="LotR_BuildingNaturalBase" Abstract="True">
+    <category>Building</category>
+    <selectable>true</selectable>
+    <drawerType>MapMeshOnly</drawerType>
+    <filthLeaving>RockRubble</filthLeaving>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+	</ThingDef>
+
+
+  <ThingDef Name="LotR_RockBase" ParentName="LotR_BuildingNaturalBase" Abstract="True" >
+    <thingClass>Mineable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Linked/Rock_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Rock</li>
+        <li>MapEdge</li>
+      </linkFlags>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <neverMultiSelect>true</neverMultiSelect>
+    <rotatable>false</rotatable>
+    <saveCompressible>true</saveCompressible>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <mineable>true</mineable>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+    <building>
+      <isInert>true</isInert>
+      <isNaturalRock>true</isNaturalRock>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>false</deconstructible>
+    </building>
+  </ThingDef>
+
+  
   <ThingDef Name="LotR_ResourceBase" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
     <category>Item</category>
@@ -45,23 +91,24 @@
     <stackLimit>1</stackLimit>
     <tradeability>Never</tradeability>
   </ThingDef>
+  
+<!-- Iron -->
 	
   <ThingDef ParentName="LotR_ResourceBase">
     <defName>LotR_Iron</defName>
     <label>iron</label>
     <description>A sturdy natural resource used for building structures, tools, and weapons.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Metal</texPath>
+      <texPath>Things/Item/Resource/edmundWulfgarthIron</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-      <color>(235,235,235)</color>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
     <statBases>
       <MarketValue>1.75</MarketValue>
       <Mass>0.6</Mass>
-      <SharpDamageMultiplier>0.9</SharpDamageMultiplier>
-      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+      <SharpDamageMultiplier>0.87</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.87</BluntDamageMultiplier>
     </statBases>
     <useHitPoints>false</useHitPoints>
     <slagDef>LotR_ChunkSlagIron</slagDef>
@@ -97,9 +144,10 @@
     <graphicData>
       <texPath>Things/Item/Chunk/ChunkSlag</texPath>
       <graphicClass>Graphic_Random</graphicClass>
+      <color>(116,65,62)</color>
     </graphicData>
     <statBases>
-      <Mass>5</Mass>
+      <Mass>7</Mass>
     </statBases>
     <soundDrop>ChunkSlag_Drop</soundDrop>
     <thingCategories>
@@ -109,7 +157,69 @@
       <LotR_Iron>10</LotR_Iron>
     </smeltProducts>
   </ThingDef>
+  
+  <ThingDef ParentName="LotR_RockBase">
+    <defName>LotR_MineableIron</defName>
+    <label>iron ore deposit</label>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(116,65,62)</color>
+      <colorTwo>(203,205,205)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1500</MaxHitPoints>
+    </statBases>
+    <description>Naturally occurring ore deposits. Rich in iron.</description>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>LotR_Iron</mineableThing>
+      <mineableYield>35</mineableYield>
+      <mineableScatterCommonality>1</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>20</min>
+        <max>40</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
 
+  <RecipeDef>
+    <defName>LotR_ExtractSteelFromIron</defName>
+    <label>smelt steel from iron</label>
+    <description>Use heat to separate useful steel from iron.</description>
+    <jobString>Smelting steel from iron.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>LotR_Iron</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <!-- Switched to standard products so we can do "do until you have X"
+    <specialProducts>
+      <li>Smelted</li>
+    </specialProducts>-->
+	<recipeUsers>
+		<li>TableStonecutter</li>
+	</recipeUsers>
+    <products>
+      <Steel>10</Steel>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>LotR_Iron</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
   <ThingDef ParentName="LotR_ResourceBase">
     <defName>LotR_Mithril</defName>
     <label>mithril</label>

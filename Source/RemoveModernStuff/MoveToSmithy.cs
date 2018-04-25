@@ -16,6 +16,9 @@ namespace RemoveModernStuff
             MoveRecipesToSmithy();
 
             ChangeSteelToIron();
+            
+            ReplaceModernResources();
+
         }
 
         private static void MoveRecipesToSmithy()
@@ -45,9 +48,31 @@ namespace RemoveModernStuff
                 tdd.costList.Add(newTempCost);
                 steelDefs++;
             }
-            if (ThingDefOf.Steel?.deepCommonality > 2)
-                ThingDefOf.Steel.deepCommonality = 2;
+            
+            
             Log.Message("Replaced " + steelDefs + " defs with Iron.");
+        }
+
+        private static void ReplaceModernResources()
+        {
+            if (ThingDefOf.Steel?.stuffProps?.commonality >= 0.9f)
+                ThingDefOf.Steel.stuffProps.commonality = 0.2f;
+            if (ThingDefOf.Plasteel?.stuffProps?.commonality >= 0.19f)
+                ThingDefOf.Plasteel.stuffProps.commonality = 0.0f;
+            if (ThingDefOf.Uranium?.stuffProps?.commonality >= 0.04f)
+                ThingDefOf.Uranium.stuffProps.commonality = 0.0f;
+            if (ThingDef.Named("Synthread")?.stuffProps?.commonality >= 0.014f)
+                ThingDef.Named("Synthread").stuffProps.commonality = 0.0f;
+            ThingDefOf.MineableSteel.building.mineableScatterCommonality = 0.0f;
+            ThingDef.Named("MineablePlasteel").building.mineableScatterCommonality = 0.0f;
+            ThingDef.Named("MineableUranium").building.mineableScatterCommonality = 0.0f;
+            ThingDef.Named("MineableComponents").building.mineableScatterCommonality = 0.0f;
+            if (FactionDefOf.PlayerColony?.apparelStuffFilter?.Allows(ThingDef.Named("Synthread")) ?? false)
+            {
+                FactionDefOf.PlayerColony.apparelStuffFilter = new ThingFilter();
+                FactionDefOf.PlayerColony.apparelStuffFilter.SetDisallowAll();
+                FactionDefOf.PlayerColony.apparelStuffFilter.SetAllow(ThingDefOf.Cloth, true);
+            }
         }
     }
 }

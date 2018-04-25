@@ -37,7 +37,7 @@ namespace RemoveModernStuff
             foreach (DesignationCategoryDef dcd in DefDatabase<DesignationCategoryDef>.AllDefs)
                 resolveDesignatorsAgain.Invoke(dcd, null);
 
-            RemoveStuff(typeof(DefDatabase<PawnKindDef>), DefDatabase<PawnKindDef>.AllDefs.Where(pkd => pkd.defaultFactionType != FactionDefOf.PlayerColony && (pkd.race.techLevel > maxTechLevel || pkd.defaultFactionType?.techLevel > maxTechLevel)).Cast<Def>());
+            RemoveStuff(typeof(DefDatabase<PawnKindDef>), DefDatabase<PawnKindDef>.AllDefs.Where(pkd => pkd?.defaultFactionType?.defName != "PlayerColony" && (pkd.race.techLevel > maxTechLevel || pkd.defaultFactionType?.techLevel > maxTechLevel)).Cast<Def>());
             RemoveStuff(typeof(DefDatabase<FactionDef>), DefDatabase<FactionDef>.AllDefs.Where(fd => fd.techLevel > maxTechLevel).Cast<Def>());
 
             foreach (MapGeneratorDef mgd in DefDatabase<MapGeneratorDef>.AllDefs)

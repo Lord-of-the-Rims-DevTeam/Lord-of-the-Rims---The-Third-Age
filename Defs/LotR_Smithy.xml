@@ -18,8 +18,12 @@
       </damageData>
     </graphicData>
     <costList>
-      <Steel>100</Steel>
+      <Steel>30</Steel>
     </costList>
+	<costStuffCount>100</costStuffCount>
+	<stuffCategories>
+	  <li>Stony</li>
+	</stuffCategories>
     <altitudeLayer>Building</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
@@ -29,7 +33,7 @@
       <Flammability>1.0</Flammability>
       <Cleanliness>-2</Cleanliness>
     </statBases>
-    <size>(5,2)</size>
+    <size>(4,2)</size>
     <designationCategory>Production</designationCategory>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>

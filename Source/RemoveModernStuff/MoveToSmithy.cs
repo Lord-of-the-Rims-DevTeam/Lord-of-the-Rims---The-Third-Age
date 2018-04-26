@@ -13,11 +13,11 @@ namespace RemoveModernStuff
         private static int steelDefs;
         static MoveToSmithy()
         {
-            MoveRecipesToSmithy();
-
-            ChangeSteelToIron();
-            
-            ReplaceModernResources();
+//            MoveRecipesToSmithy();
+//
+//            ChangeSteelToIron();
+//            
+//            ReplaceModernResources();
 
         }
 

@@ -6,6 +6,7 @@
     <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="RemoveModernStuff" t="IncludeRecursive">
+        <e p="ModStuff.cs" t="Include" />
         <e p="MoveToSmithy.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Properties" t="Include">

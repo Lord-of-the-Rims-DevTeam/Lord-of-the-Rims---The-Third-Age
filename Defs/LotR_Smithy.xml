@@ -16,6 +16,9 @@
         <cornerBL>Damage/Corner</cornerBL>
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
+	  <shadowData>
+		<volume>(0.4, 0.8, 0.4)</volume>
+	  </shadowData>
     </graphicData>
     <costList>
       <Steel>30</Steel>

@@ -38,7 +38,7 @@ namespace RemoveModernStuff
                 resolveDesignatorsAgain.Invoke(dcd, null);
 
             RemoveStuff(typeof(DefDatabase<PawnKindDef>), DefDatabase<PawnKindDef>.AllDefs.Where(pkd => pkd?.defaultFactionType?.defName != "PlayerColony" && (pkd.race.techLevel > maxTechLevel || pkd.defaultFactionType?.techLevel > maxTechLevel)).Cast<Def>());
-            RemoveStuff(typeof(DefDatabase<FactionDef>), DefDatabase<FactionDef>.AllDefs.Where(fd => fd.techLevel > maxTechLevel).Cast<Def>());
+            RemoveStuff(typeof(DefDatabase<FactionDef>), DefDatabase<FactionDef>.AllDefs.Where(fd => fd.defName != "PlayerColony" && fd.techLevel > maxTechLevel).Cast<Def>());
 
             foreach (MapGeneratorDef mgd in DefDatabase<MapGeneratorDef>.AllDefs)
                 mgd.GenSteps.RemoveAll(gs => gs.genStep is GenStep_SleepingMechanoids || gs.genStep is GenStep_Turrets || gs.genStep is GenStep_Power);

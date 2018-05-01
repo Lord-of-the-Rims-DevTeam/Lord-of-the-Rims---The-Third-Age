@@ -13,11 +13,11 @@ namespace RemoveModernStuff
         private static int steelDefs;
         static MoveToSmithy()
         {
-//            MoveRecipesToSmithy();
+            MoveRecipesToSmithy();
 //
-//            ChangeSteelToIron();
+            ChangeSteelToIron();
 //            
-//            ReplaceModernResources();
+            ReplaceModernResources();
 
         }
 
@@ -28,9 +28,18 @@ namespace RemoveModernStuff
                 (t?.recipeMaker?.recipeUsers?.Contains(ThingDef.Named("FueledSmithy")) ?? false) ||
                 (t?.recipeMaker?.recipeUsers?.Contains(ThingDef.Named("TableMachining")) ?? false)))
             {
-                td.recipeMaker.recipeUsers.RemoveAll(x => x.defName == "TableMachining" ||
-                                                          x.defName == "FueledSmithy");
+                //td.recipeMaker.recipeUsers.RemoveAll(x => x.defName == "TableMachining" ||
+                //                                          x.defName == "FueledSmithy");
                 td.recipeMaker.recipeUsers.Add(ThingDef.Named("LotR_TableSmithy"));
+                movedDefs++;
+            }
+            foreach (RecipeDef rd in DefDatabase<RecipeDef>.AllDefs.Where(d =>
+                (d.recipeUsers?.Contains(ThingDef.Named("TableMachining")) ?? false) ||
+                (d.recipeUsers?.Contains(ThingDef.Named("FueledSmithy")) ?? false)))
+            {
+                //rd.recipeUsers.RemoveAll(x => x.defName == "TableMachining" ||
+                //                                          x.defName == "FueledSmithy");
+                rd.recipeUsers.Add(ThingDef.Named("LotR_TableSmithy"));
                 movedDefs++;
             }
             Log.Message("Moved " + movedDefs + " from Machining Table to Smithy.");

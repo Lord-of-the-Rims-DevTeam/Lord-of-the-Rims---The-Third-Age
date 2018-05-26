@@ -14,6 +14,6 @@ C:\Games\RimWorld1722Win\Mods\RemoveModernStuff\Assemblies\RemoveModernStuff.dll
 D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Assemblies\RemoveModernStuff.dll
 D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.csprojResolveAssemblyReference.cache
 D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Assemblies\RemoveModernStuff.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.csprojResolveAssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source\RemoveModernStuff\obj\Debug\RemoveModernStuff.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Assemblies\TheThirdAge.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source\RemoveModernStuff\obj\Debug\TheThirdAge.dll

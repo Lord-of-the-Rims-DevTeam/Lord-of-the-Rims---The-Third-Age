@@ -7,8 +7,8 @@
     <ProjectGuid>{2C53833E-4687-4D26-ABB6-52A112239B6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RemoveModernStuff</RootNamespace>
-    <AssemblyName>RemoveModernStuff</AssemblyName>
+    <RootNamespace>TheThirdAge</RootNamespace>
+    <AssemblyName>TheThirdAge</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

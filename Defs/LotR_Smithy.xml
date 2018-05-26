@@ -43,9 +43,7 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
-    <recipes>
-      <li>ButcherCorpseMechanoid</li>
-    </recipes>
+    <recipes></recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>
@@ -73,9 +71,10 @@
     </comps>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+      <heatPerTickWhileWorking>0.30</heatPerTickWhileWorking>
+	  <workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
+	  <workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
     </building>
-    <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
 	  <li>Smithing</li>
 	</researchPrerequisites>
@@ -83,6 +82,8 @@
 	<placeWorkers>
 		<li>PlaceWorker_ShowFacilitiesConnections</li>
 	</placeWorkers>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
   </ThingDef>
 	
 </Defs>

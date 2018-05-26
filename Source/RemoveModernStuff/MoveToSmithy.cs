@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using RimWorld;
-using UnityEngine;
 using Verse;
 
-namespace RemoveModernStuff
+namespace TheThirdAge
 {
     [StaticConstructorOnStartup]
     public static class MoveToSmithy

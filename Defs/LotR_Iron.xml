@@ -208,7 +208,7 @@
       <li>Smelted</li>
     </specialProducts>-->
 	<recipeUsers>
-		<li>TableStonecutter</li>
+		<li>LotR_TableSmithy</li>
 	</recipeUsers>
     <products>
       <Steel>10</Steel>

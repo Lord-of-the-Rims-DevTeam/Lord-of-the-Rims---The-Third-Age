@@ -6,7 +6,7 @@ using RimWorld;
 using RimWorld.BaseGen;
 using Verse;
 
-namespace RemoveModernStuff
+namespace TheThirdAge
 {
     [StaticConstructorOnStartup]
     public static class RemoveModernStuff

@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace RemoveModernStuff
+namespace TheThirdAge
 {
     public class ModStuff : Mod
     {

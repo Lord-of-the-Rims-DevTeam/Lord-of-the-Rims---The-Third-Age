@@ -10,20 +10,178 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
+      <file leaf-file-name="OnStartup.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RemoveModernStuff/OnStartup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
+              <folding>
+                <marker date="1527606863095" expanded="false" signature="6:124" ph="..." />
+                <marker date="1527606863095" expanded="true" signature="147:8752" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="216:8750" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="325:552" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="595:843" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="691:836" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="892:1802" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="960:1043" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="1112:1428" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="1491:1795" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="1844:5323" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="2006:4591" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="3362:3429" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="4703:5220" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="4799:5187" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="4877:5136" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="5374:6659" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="5689:6013" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="5720:5886" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
+                <marker date="1527606863095" expanded="true" signature="6265:6565" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="6296:6450" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
+                <marker date="1527606863095" expanded="true" signature="6708:7362" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="6907:7255" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="7416:8744" ph="{...}" />
+                <marker date="1527606863095" expanded="true" signature="8450:8734" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TTADefOf.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RemoveModernStuff/TTADefOf.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding>
+                <marker date="1527415894441" expanded="false" signature="6:28" ph="..." />
+                <marker date="1527415894441" expanded="true" signature="51:464" ph="{...}" />
+                <marker date="1527415894441" expanded="true" signature="98:462" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RemoveModernStuff.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="266">
+              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding>
-                <marker date="1527305083801" expanded="false" signature="6:144" ph="..." />
-                <marker date="1527305083801" expanded="true" signature="244:3692" ph="{...}" />
-                <marker date="1527305083801" expanded="true" signature="377:3330" ph="{...}" />
-                <marker date="1527305083801" expanded="true" signature="1558:1655" ph="{...}" />
-                <marker date="1527305083801" expanded="true" signature="2788:3238" ph="{...}" />
-                <marker date="1527305083801" expanded="true" signature="3405:3686" ph="{...}" />
-                <marker date="1527305083801" expanded="true" signature="3553:3676" ph="{...}" />
+                <marker date="1527608867827" expanded="true" signature="6:144" ph="..." />
+                <marker date="1527608867827" expanded="true" signature="167:3701" ph="{...}" />
+                <marker date="1527608867827" expanded="true" signature="244:3699" ph="{...}" />
+                <marker date="1527608867827" expanded="true" signature="384:3337" ph="{...}" />
+                <marker date="1527608867827" expanded="true" signature="1565:1662" ph="{...}" />
+                <marker date="1527608867827" expanded="true" signature="2795:3245" ph="{...}" />
+                <marker date="1527608867827" expanded="true" signature="3412:3693" ph="{...}" />
+                <marker date="1527608867827" expanded="true" signature="3560:3683" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemoveModernStuffHarmony.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuffHarmony.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <folding>
+                <marker date="1527608933281" expanded="false" signature="6:182" ph="..." />
+                <marker date="1527608933281" expanded="true" signature="205:1060" ph="{...}" />
+                <marker date="1527608933281" expanded="true" signature="289:1058" ph="{...}" />
+                <marker date="1527608933281" expanded="true" signature="337:683" ph="{...}" />
+                <marker date="1527608933281" expanded="true" signature="843:1052" ph="{...}" />
+                <marker date="1527608933281" expanded="true" signature="925:1017" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompMedievalRottable.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RemoveModernStuff/CompMedievalRottable.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="157" column="49" lean-forward="false" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
+              <folding>
+                <marker date="1527404802641" expanded="true" signature="6:141" ph="..." />
+                <marker date="1527404802641" expanded="true" signature="164:7691" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="219:7689" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="282:3075" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="376:802" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="909:3013" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="1234:1975" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="1316:1957" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="1558:1651" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="1715:1809" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="2234:2338" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="2359:2999" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="2416:2689" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="2544:2658" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="2714:2981" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="2836:2950" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="3120:6398" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="3215:6388" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="3844:3969" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="4310:4647" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="4400:4480" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="4540:4626" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="4870:5493" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="4988:5386" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="5128:5189" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="5600:6374" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="5712:5958" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="6103:6356" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="6468:7033" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="7083:7473" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="7143:7438" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="7354:7424" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="7510:7683" ph="{...}" />
+                <marker date="1527404802641" expanded="true" signature="7603:7673" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Building_RottableFixer.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RemoveModernStuff/Building_RottableFixer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+              <folding>
+                <marker date="1527609494430" expanded="false" signature="6:107" ph="..." />
+                <marker date="1527609494430" expanded="true" signature="130:2347" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="213:2345" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="405:1097" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="922:1087" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="1138:1240" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="1302:2076" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="1378:2066" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="1452:2052" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="1620:2034" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="2119:2339" ph="{...}" />
+                <marker date="1527609494430" expanded="true" signature="2161:2329" ph="/* Scribe_Deep.Look&lt;StorageSettings&gt;(ref this.curStorageSettings, &quot;curStorageSettings&quot;, new object[] ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenStep_ScatterShrinesMedieval.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RemoveModernStuff/GenStep_ScatterShrinesMedieval.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1527406076588" expanded="false" signature="6:100" ph="..." />
+                <marker date="1527406076588" expanded="true" signature="123:3140" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="199:3138" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="261:438" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="300:328" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="517:2878" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="1278:1300" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="1337:1543" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="1437:1538" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="1504:1532" ph="{...}" />
+                <marker date="1527406076588" expanded="true" signature="1599:1621" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -32,35 +190,14 @@
       <file leaf-file-name="ModStuff.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RemoveModernStuff/ModStuff.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="437">
+              <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
-                <marker date="1527305083818" expanded="true" signature="69:178" ph="{...}" />
-                <marker date="1527305083818" expanded="true" signature="139:172" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MoveToSmithy.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="30" column="83" lean-forward="true" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
-              <folding>
-                <marker date="1527305082091" expanded="true" signature="6:47" ph="..." />
-                <marker date="1527305082091" expanded="true" signature="70:3828" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="142:3826" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="254:399" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="450:1735" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="765:1089" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="796:962" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-                <marker date="1527305082091" expanded="true" signature="1341:1641" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="1372:1526" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-                <marker date="1527305082091" expanded="true" signature="1784:2438" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="1983:2331" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="2492:3820" ph="{...}" />
-                <marker date="1527305082091" expanded="true" signature="3526:3810" ph="{...}" />
+                <marker date="1527606706522" expanded="true" signature="6:43" ph="..." />
+                <marker date="1527606706522" expanded="true" signature="66:652" ph="{...}" />
+                <marker date="1527606706522" expanded="true" signature="100:650" ph="{...}" />
+                <marker date="1527606706522" expanded="true" signature="170:515" ph="{...}" />
+                <marker date="1527606706522" expanded="true" signature="584:644" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -72,19 +209,44 @@
     <findStrings>
       <find>Player</find>
       <find>Faction</find>
+      <find>GenStep_ScatterShrines</find>
+      <find>cate</find>
+      <find>hash</find>
+      <find>Salted</find>
     </findStrings>
+    <replaceStrings>
+      <replace>GenStep_ScatterShrinesMedieval</replace>
+    </replaceStrings>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/Building_RottableFixer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/TTADefOf.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/SymbolResolver_Interior_AncientTempleMedieval.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/GenStep_ScatterShrinesMedieval.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/SymbolResolver_AncientShrinesGroupMedieval.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuffHarmony.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RemoveModernStuff/ModStuff.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/CompMedievalRottable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/765250CD-2B53-4903-8F57-1EFC3734D8FA/67/d2023d29/Building_Storage.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/RemoveModernStuff/OnStartup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/RemoveModernStuff/ModStuff.cs" />
-        <option value="$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs" />
         <option value="$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/CompMedievalRottable.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/GenStep_ScatterShrinesMedieval.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/SymbolResolver_AncientShrinesGroupMedieval.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/SymbolResolver_Interior_AncientTempleMedieval.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/TheThirdAgeDefOf.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/TTADefOf.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/ThirdAgeHarmony.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/ModStuff.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/OnStartup.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuffHarmony.cs" />
+        <option value="$PROJECT_DIR$/RemoveModernStuff/Building_RottableFixer.cs" />
       </list>
     </option>
   </component>
@@ -94,11 +256,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="666" />
-    <option name="y" value="158" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="14" />
+    <option name="y" value="65" />
     <option name="width" value="1088" />
-    <option name="height" value="797" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -122,6 +284,24 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="RemoveModernStuff (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="RemoveModernStuff (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="RemoveModernStuff" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="RemoveModernStuff (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="RemoveModernStuff" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="References" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="RemoveModernStuff (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="RemoveModernStuff" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="References" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assemblies" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -133,7 +313,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RimworldModReleaseTool.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Lord-of-the-Rims---Men-and-Beasts/Assemblies/0Harmony.dll" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -180,11 +360,13 @@
       <workItem from="1525139437637" duration="1257000" />
       <workItem from="1525350510429" duration="598000" />
       <workItem from="1527305018069" duration="1713000" />
+      <workItem from="1527391079635" duration="18566000" />
+      <workItem from="1527598429191" duration="8871000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15157000" />
+    <option name="totallyTimeSpent" value="42594000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -196,18 +378,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="7" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17780173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17564656" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07250269" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24489796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -217,6 +399,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -233,290 +416,186 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
+    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/GenStep_ScatterShrinesMedieval.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1527305083801" expanded="false" signature="6:144" ph="..." />
-            <marker date="1527305083801" expanded="true" signature="244:3692" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="377:3330" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="1558:1655" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="2788:3238" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3405:3686" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3553:3676" ph="{...}" />
+            <marker date="1527406076588" expanded="false" signature="6:100" ph="..." />
+            <marker date="1527406076588" expanded="true" signature="123:3140" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="199:3138" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="261:438" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="300:328" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="517:2878" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="1278:1300" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="1337:1543" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="1437:1538" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="1504:1532" ph="{...}" />
+            <marker date="1527406076588" expanded="true" signature="1599:1621" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/ModStuff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <marker date="1527305083818" expanded="true" signature="69:178" ph="{...}" />
-            <marker date="1527305083818" expanded="true" signature="139:172" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs">
+    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/TTADefOf.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
-            <marker date="1527305082091" expanded="true" signature="6:47" ph="..." />
-            <marker date="1527305082091" expanded="true" signature="70:3828" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="142:3826" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="254:399" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="450:1735" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="765:1089" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="796:962" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1341:1641" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1372:1526" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1784:2438" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1983:2331" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="2492:3820" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="3526:3810" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1527305083801" expanded="false" signature="6:144" ph="..." />
-            <marker date="1527305083801" expanded="true" signature="244:3692" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="377:3330" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="1558:1655" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="2788:3238" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3405:3686" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3553:3676" ph="{...}" />
+            <marker date="1527415894441" expanded="false" signature="6:28" ph="..." />
+            <marker date="1527415894441" expanded="true" signature="51:464" ph="{...}" />
+            <marker date="1527415894441" expanded="true" signature="98:462" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RemoveModernStuff/ModStuff.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="437">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
-            <marker date="1527305083818" expanded="true" signature="69:178" ph="{...}" />
-            <marker date="1527305083818" expanded="true" signature="139:172" ph="{...}" />
+            <marker date="1527606706522" expanded="true" signature="6:43" ph="..." />
+            <marker date="1527606706522" expanded="true" signature="66:652" ph="{...}" />
+            <marker date="1527606706522" expanded="true" signature="100:650" ph="{...}" />
+            <marker date="1527606706522" expanded="true" signature="170:515" ph="{...}" />
+            <marker date="1527606706522" expanded="true" signature="584:644" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs">
+    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/OnStartup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="589">
+          <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
           <folding>
-            <marker date="1527305082091" expanded="true" signature="6:47" ph="..." />
-            <marker date="1527305082091" expanded="true" signature="70:3828" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="142:3826" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="254:399" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="450:1735" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="765:1089" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="796:962" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1341:1641" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1372:1526" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1784:2438" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1983:2331" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="2492:3820" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="3526:3810" ph="{...}" />
+            <marker date="1527606863095" expanded="false" signature="6:124" ph="..." />
+            <marker date="1527606863095" expanded="true" signature="147:8752" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="216:8750" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="325:552" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="595:843" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="691:836" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="892:1802" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="960:1043" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="1112:1428" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="1491:1795" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="1844:5323" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="2006:4591" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="3362:3429" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="4703:5220" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="4799:5187" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="4877:5136" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="5374:6659" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="5689:6013" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="5720:5886" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
+            <marker date="1527606863095" expanded="true" signature="6265:6565" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="6296:6450" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
+            <marker date="1527606863095" expanded="true" signature="6708:7362" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="6907:7255" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="7416:8744" ph="{...}" />
+            <marker date="1527606863095" expanded="true" signature="8450:8734" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/765250CD-2B53-4903-8F57-1EFC3734D8FA/67/d2023d29/Building_Storage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="96" column="70" lean-forward="true" selection-start-line="96" selection-start-column="70" selection-end-line="96" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/CompMedievalRottable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="157" column="49" lean-forward="false" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
+          <folding>
+            <marker date="1527404802641" expanded="true" signature="6:141" ph="..." />
+            <marker date="1527404802641" expanded="true" signature="164:7691" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="219:7689" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="282:3075" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="376:802" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="909:3013" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="1234:1975" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="1316:1957" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="1558:1651" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="1715:1809" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="2234:2338" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="2359:2999" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="2416:2689" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="2544:2658" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="2714:2981" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="2836:2950" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="3120:6398" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="3215:6388" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="3844:3969" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="4310:4647" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="4400:4480" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="4540:4626" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="4870:5493" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="4988:5386" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="5128:5189" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="5600:6374" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="5712:5958" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="6103:6356" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="6468:7033" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="7083:7473" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="7143:7438" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="7354:7424" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="7510:7683" ph="{...}" />
+            <marker date="1527404802641" expanded="true" signature="7603:7673" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding>
-            <marker date="1527305083801" expanded="false" signature="6:144" ph="..." />
-            <marker date="1527305083801" expanded="true" signature="244:3692" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="377:3330" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="1558:1655" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="2788:3238" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3405:3686" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3553:3676" ph="{...}" />
+            <marker date="1527608867827" expanded="true" signature="6:144" ph="..." />
+            <marker date="1527608867827" expanded="true" signature="167:3701" ph="{...}" />
+            <marker date="1527608867827" expanded="true" signature="244:3699" ph="{...}" />
+            <marker date="1527608867827" expanded="true" signature="384:3337" ph="{...}" />
+            <marker date="1527608867827" expanded="true" signature="1565:1662" ph="{...}" />
+            <marker date="1527608867827" expanded="true" signature="2795:3245" ph="{...}" />
+            <marker date="1527608867827" expanded="true" signature="3412:3693" ph="{...}" />
+            <marker date="1527608867827" expanded="true" signature="3560:3683" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/ModStuff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <marker date="1527305083818" expanded="true" signature="69:178" ph="{...}" />
-            <marker date="1527305083818" expanded="true" signature="139:172" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="66" column="90" lean-forward="false" selection-start-line="66" selection-start-column="90" selection-end-line="66" selection-end-column="90" />
-          <folding>
-            <marker date="1527305082091" expanded="true" signature="6:47" ph="..." />
-            <marker date="1527305082091" expanded="true" signature="70:3828" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="142:3826" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="254:399" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="450:1735" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="765:1089" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="796:962" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1341:1641" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1372:1526" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1784:2438" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1983:2331" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="2492:3820" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="3526:3810" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="36" column="95" lean-forward="true" selection-start-line="36" selection-start-column="95" selection-end-line="36" selection-end-column="95" />
-          <folding>
-            <marker date="1527305083801" expanded="false" signature="6:144" ph="..." />
-            <marker date="1527305083801" expanded="true" signature="244:3692" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="377:3330" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="1558:1655" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="2788:3238" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3405:3686" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3553:3676" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <marker date="1527305082091" expanded="true" signature="6:47" ph="..." />
-            <marker date="1527305082091" expanded="true" signature="70:3828" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="142:3826" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="254:399" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="450:1735" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="765:1089" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="796:962" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1341:1641" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1372:1526" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1784:2438" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1983:2331" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="2492:3820" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="3526:3810" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="42" column="81" lean-forward="false" selection-start-line="42" selection-start-column="81" selection-end-line="42" selection-end-column="81" />
-          <folding>
-            <marker date="1527305083801" expanded="false" signature="6:144" ph="..." />
-            <marker date="1527305083801" expanded="true" signature="244:3692" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="377:3330" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="1558:1655" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="2788:3238" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3405:3686" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3553:3676" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <marker date="1527305082091" expanded="true" signature="6:47" ph="..." />
-            <marker date="1527305082091" expanded="true" signature="70:3828" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="142:3826" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="254:399" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="450:1735" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="765:1089" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="796:962" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1341:1641" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1372:1526" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1784:2438" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1983:2331" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="2492:3820" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="3526:3810" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1527305083801" expanded="false" signature="6:144" ph="..." />
-            <marker date="1527305083801" expanded="true" signature="244:3692" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="377:3330" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="1558:1655" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="2788:3238" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3405:3686" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3553:3676" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/ModStuff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <marker date="1527305083818" expanded="true" signature="69:178" ph="{...}" />
-            <marker date="1527305083818" expanded="true" signature="139:172" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <marker date="1527305083801" expanded="false" signature="6:144" ph="..." />
-            <marker date="1527305083801" expanded="true" signature="244:3692" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="377:3330" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="1558:1655" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="2788:3238" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3405:3686" ph="{...}" />
-            <marker date="1527305083801" expanded="true" signature="3553:3676" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/MoveToSmithy.cs">
+    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuffHarmony.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="30" column="83" lean-forward="true" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding>
-            <marker date="1527305082091" expanded="true" signature="6:47" ph="..." />
-            <marker date="1527305082091" expanded="true" signature="70:3828" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="142:3826" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="254:399" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="450:1735" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="765:1089" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="796:962" ph="/* td.recipeMaker.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1341:1641" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1372:1526" ph="/* rd.recipeUsers.RemoveAll(x =&gt; x.defName == &quot;TableMachining&quot; || ... */" />
-            <marker date="1527305082091" expanded="true" signature="1784:2438" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="1983:2331" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="2492:3820" ph="{...}" />
-            <marker date="1527305082091" expanded="true" signature="3526:3810" ph="{...}" />
+            <marker date="1527608933281" expanded="false" signature="6:182" ph="..." />
+            <marker date="1527608933281" expanded="true" signature="205:1060" ph="{...}" />
+            <marker date="1527608933281" expanded="true" signature="289:1058" ph="{...}" />
+            <marker date="1527608933281" expanded="true" signature="337:683" ph="{...}" />
+            <marker date="1527608933281" expanded="true" signature="843:1052" ph="{...}" />
+            <marker date="1527608933281" expanded="true" signature="925:1017" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RemoveModernStuff/Building_RottableFixer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+          <folding>
+            <marker date="1527609494430" expanded="false" signature="6:107" ph="..." />
+            <marker date="1527609494430" expanded="true" signature="130:2347" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="213:2345" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="405:1097" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="922:1087" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="1138:1240" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="1302:2076" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="1378:2066" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="1452:2052" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="1620:2034" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="2119:2339" ph="{...}" />
+            <marker date="1527609494430" expanded="true" signature="2161:2329" ph="/* Scribe_Deep.Look&lt;StorageSettings&gt;(ref this.curStorageSettings, &quot;curStorageSettings&quot;, new object[] ... */" />
           </folding>
         </state>
       </provider>

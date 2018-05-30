@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingCategoryDef>
+	<defName>LotR_MeatRawSalted</defName>
+	<label>salted meat</label>
+	<parent>MeatRaw</parent>
+	<iconPath>UI/Icons/ThingCategories/MeatRaw</iconPath>
+  </ThingCategoryDef>
+
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>LotR_PantryShelf</defName>
+    <label>pantry shelf</label>
+    <thingClass>TheThirdAge.Building_RottableFixer</thingClass>
+	<tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Shelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <WorkToBuild>1050</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Non-meatlike food stored in this will rot at a much slower rate.</description>
+    <size>(2,1)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>	
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <thingDefs>
+            <li>Beer</li>
+			<li>HerbalMedicine</li>
+          </thingDefs>
+          <categories>
+            <li>FoodMeals</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <thingDefs>
+            <li>Beer</li>
+			<li>HerbalMedicine</li>
+          </thingDefs>		
+          <categories>
+            <li>FoodMeals</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationHotKey>Misc12</designationHotKey>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>LotR_SaltBarrel</defName>
+    <label>salted pot</label>
+    <thingClass>TheThirdAge.Building_RottableFixer</thingClass>
+	<tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Furniture/PlantPot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <WorkToBuild>1050</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Food stored in this will rot at a much slower rate.</description>
+    <size>(1,1)</size>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <building>	
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <thingDefs>
+            <li>Beer</li>
+			<li>HerbalMedicine</li>
+          </thingDefs>
+          <categories>
+            <li>MeatRaw</li>
+			<li>LotR_MeatRawSalted</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <thingDefs>
+            <li>Beer</li>
+			<li>HerbalMedicine</li>
+          </thingDefs>		
+          <categories>
+            <li>MeatRaw</li>
+			<li>LotR_MeatRawSalted</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationHotKey>Misc12</designationHotKey>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+  </ThingDef>
+
+  
+
+</Defs>

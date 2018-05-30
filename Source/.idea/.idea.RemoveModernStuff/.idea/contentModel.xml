@@ -5,14 +5,21 @@
     <e p="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Lord-of-the-Rims---The-Third-Age\Source" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="RemoveModernStuff" t="IncludeRecursive">
+        <e p="Building_RottableFixer.cs" t="Include" />
+        <e p="CompMedievalRottable.cs" t="Include" />
+        <e p="GenStep_ScatterShrinesMedieval.cs" t="Include" />
         <e p="ModStuff.cs" t="Include" />
-        <e p="MoveToSmithy.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="OnStartup.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="RemoveModernStuff.cs" t="Include" />
         <e p="RemoveModernStuff.csproj" t="IncludeRecursive" />
+        <e p="RemoveModernStuffHarmony.cs" t="Include" />
+        <e p="SymbolResolver_AncientShrinesGroupMedieval.cs" t="Include" />
+        <e p="SymbolResolver_Interior_AncientTempleMedieval.cs" t="Include" />
+        <e p="TTADefOf.cs" t="Include" />
       </e>
       <e p="RemoveModernStuff.sln" t="IncludeFlat" />
     </e>

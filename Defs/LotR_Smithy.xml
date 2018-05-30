@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!-- ======= Smithing ============= -->
+
+  <WorkGiverDef>
+    <defName>LotR_DoSmithing</defName>
+    <label>smith</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>115</priorityInType>
+    <fixedBillGiverDefs>
+      <li>LotR_TableSmithy</li>
+    </fixedBillGiverDefs>
+    <verb>smith</verb>
+    <gerund>smithing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+
   <ThingDef ParentName="LotR_BenchBase">
     <defName>LotR_TableSmithy</defName>
     <label>blacksmith anvil and forge</label>

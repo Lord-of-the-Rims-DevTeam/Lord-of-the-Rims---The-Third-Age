@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>LotR_Cram</defName>
+    <label>cram</label>
+    <description>An indefinitely fresh biscuit formed from a combination of raw meat and raw plant ingredients. Not very flavorful, but useful for supplying long journeys.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/jecrellCram</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.018</Mass>
+      <WorkToMake>700</WorkToMake>
+			<DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <nutrition>0.05</nutrition>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+		</ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>80</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+  </ThingDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>LotR_MakeCram</defName>
+    <label>prepare cram</label>
+    <description>Prepares cram, an indefinitely fresh biscuit formed from a combination of raw meat and raw plant ingredients. Much of the ingredients are wasted.</description>
+    <jobString>Preparing cram.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <products>
+      <Pemmican>16</Pemmican>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <exceptedCategories>
+        <li>AnimalProductRaw</li>
+      </exceptedCategories>
+      <disallowedSpecialFilters>
+        <li>AllowPlantFood</li>
+      </disallowedSpecialFilters>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <exceptedThingDefs>
+        <li>Human_Meat</li>
+        <li>Megaspider_Meat</li>
+      </exceptedThingDefs>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+  
+</Defs>

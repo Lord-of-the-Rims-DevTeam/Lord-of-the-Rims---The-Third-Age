@@ -11,7 +11,7 @@ namespace TheThirdAge
     [StaticConstructorOnStartup]
     public static class RemoveModernStuff
     {
-        const TechLevel maxTechLevel = TechLevel.Medieval;
+        public const TechLevel maxTechLevel = TechLevel.Medieval;
         static int removedDefs;
 
         static RemoveModernStuff()

@@ -27,12 +27,14 @@ namespace TheThirdAge
             foreach (ScenarioDef def in DefDatabase<ScenarioDef>.AllDefs)
                 foreach (ScenPart sp in def.scenario.AllParts)
                     if (typeof(ScenPart_ThingCount).IsAssignableFrom(sp.GetType()) && things.Contains((ThingDef) getThingInfo.GetValue(sp)))
-                    {
                         def.scenario.RemovePart(sp);
-                    }
 
             foreach (ThingCategoryDef thingCategoryDef in DefDatabase<ThingCategoryDef>.AllDefs)
                 thingCategoryDef.childThingDefs.RemoveAll(things.Contains);
+
+            ItemCollectionGeneratorUtility.allGeneratableItems.RemoveAll(things.Contains);
+            foreach (Type type in typeof(ItemCollectionGenerator_Standard).AllSubclassesNonAbstract())
+                type.GetMethod("Reset").Invoke(null, null);
 
             RemoveStuff(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
 

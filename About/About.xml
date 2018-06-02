@@ -4,8 +4,11 @@
   <author>erdelf and Jecrell</author>
   <targetVersion>0.18.0</targetVersion>
   <description>
+    v0.8 Public Test Version
     Removes modern items.
-	Adds a blacksmith forge and anvil.
+	Adds a blacksmith forge to forge steel.
 	Adds iron and mithril.
+	
+	To do: Add a certain ring. Fix various bugs.
   </description>
 </ModMetaData>

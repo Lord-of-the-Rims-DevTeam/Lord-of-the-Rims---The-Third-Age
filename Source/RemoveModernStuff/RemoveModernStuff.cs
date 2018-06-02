@@ -8,6 +8,8 @@ using Verse;
 
 namespace TheThirdAge
 {
+    using Harmony;
+
     [StaticConstructorOnStartup]
     public static class RemoveModernStuff
     {
@@ -33,8 +35,32 @@ namespace TheThirdAge
                 thingCategoryDef.childThingDefs.RemoveAll(things.Contains);
 
             ItemCollectionGeneratorUtility.allGeneratableItems.RemoveAll(things.Contains);
+
             foreach (Type type in typeof(ItemCollectionGenerator_Standard).AllSubclassesNonAbstract())
                 type.GetMethod("Reset").Invoke(null, null);
+
+            foreach (TraderKindDef tkd in DefDatabase<TraderKindDef>.AllDefs)
+            {
+                for (int i = tkd.stockGenerators.Count - 1; i >= 0; i--)
+                {
+                    StockGenerator stockGenerator = tkd.stockGenerators[i];
+
+                    if (stockGenerator is StockGenerator_SingleDef sd && things.Contains(Traverse.Create(sd).Field("thingDef").GetValue<ThingDef>()))
+                        tkd.stockGenerators.Remove(stockGenerator);
+                    if (stockGenerator is StockGenerator_MultiDef md)
+                    {
+                        Traverse thingListTraverse = Traverse.Create(md).Field("thingDefs");
+                        List<ThingDef> thingList = thingListTraverse.GetValue<List<ThingDef>>();
+                        thingList.RemoveAll(things.Contains);
+
+                        if (thingList.NullOrEmpty())
+                            tkd.stockGenerators.Remove(stockGenerator);
+                        else
+                            thingListTraverse.SetValue(thingList);
+                    }
+
+                }
+            }
 
             RemoveStuff(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
 

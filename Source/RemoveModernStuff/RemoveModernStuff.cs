@@ -31,6 +31,9 @@ namespace TheThirdAge
                         def.scenario.RemovePart(sp);
                     }
 
+            foreach (ThingCategoryDef thingCategoryDef in DefDatabase<ThingCategoryDef>.AllDefs)
+                thingCategoryDef.childThingDefs.RemoveAll(things.Contains);
+
             RemoveStuff(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
 
             MethodInfo resolveDesignatorsAgain = typeof(DesignationCategoryDef).GetMethod("ResolveDesignators", BindingFlags.NonPublic | BindingFlags.Instance);

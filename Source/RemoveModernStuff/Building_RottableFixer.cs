@@ -29,27 +29,32 @@ namespace TheThirdAge
         public override void TickRare()
         {
             base.TickRare();
+            if (!Spawned || Destroyed) return;
             MakeAllHeldThingsMedievalCompRottable();
         }
 
         private void MakeAllHeldThingsMedievalCompRottable()
         {
-            foreach (var thing in PositionHeld.GetThingList(Map))
+            foreach (var pos in this.OccupiedRect().Cells)
             {
-                if (thing is ThingWithComps thingWithComps)
+                foreach (var thing in pos.GetThingList(Map))
                 {
-                    var rottable = thing.TryGetComp<CompRottable>();
-                    if (rottable != null && !(rottable is CompMedievalRottable))
+                    if (thing is ThingWithComps thingWithComps)
                     {
-                        var newRot = new CompMedievalRottable();
-                        thingWithComps.AllComps.Remove(rottable);
-                        thingWithComps.AllComps.Add(newRot);
-                        newRot.props = rottable.props;
-                        newRot.parent = thingWithComps;
-                        newRot.RotProgress = rottable.RotProgress;
+                        var rottable = thing.TryGetComp<CompRottable>();
+                        if (rottable != null && !(rottable is CompMedievalRottable))
+                        {
+                            var newRot = new CompMedievalRottable();
+                            thingWithComps.AllComps.Remove(rottable);
+                            thingWithComps.AllComps.Add(newRot);
+                            newRot.props = rottable.props;
+                            newRot.parent = thingWithComps;
+                            newRot.RotProgress = rottable.RotProgress;
+                        }
                     }
                 }
             }
+
         }
 
         public override void ExposeData()

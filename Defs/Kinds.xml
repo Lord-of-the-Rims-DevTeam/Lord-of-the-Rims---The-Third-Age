@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="LotR_MedievalBase" Abstract="True">
+    <defaultFactionType>LotRPlayerColony</defaultFactionType>
+    <chemicalAddictionChance>0.0</chemicalAddictionChance>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+    <backstoryCategory>Civil</backstoryCategory>
+    <apparelTags>
+      <li>Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef Name="LotR_Villager" ParentName="LotR_MedievalBase">
+    <defName>LotR_MedievalVillager</defName>
+    <label>villager</label>
+    <race>Human</race>
+    <combatPower>30</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>2.0</max>
+    </gearHealthRange>
+	<apparelMoney>
+	  <min>300</min>
+	  <max>500</max>
+	</apparelMoney>
+	<apparelRequired>
+      <li>Apparel_BasicShirt</li>
+      <li>Apparel_Pants</li>
+    </apparelRequired>
+    <apparelAllowHeadwearChance>0.0</apparelAllowHeadwearChance>
+    <techHediffsChance>0.001</techHediffsChance>
+    <invNutrition>0</invNutrition>
+  </PawnKindDef>
+
+</Defs>

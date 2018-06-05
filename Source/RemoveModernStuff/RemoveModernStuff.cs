@@ -64,6 +64,21 @@ namespace TheThirdAge
                 }
             }
 
+            RemoveStuff(typeof(DefDatabase<IncidentDef>), DefDatabase<IncidentDef>.AllDefs.Where(id => new[]
+                {
+                    typeof(IncidentWorker_ShipChunkDrop),
+                    AccessTools.TypeByName("IncidentWorker_ShipPartCrash"),
+                    typeof(IncidentWorker_JourneyOffer),
+                    typeof(IncidentWorker_ResourcePodCrash),
+                    typeof(IncidentWorker_RefugeePodCrash),
+                    typeof(IncidentWorker_PsychicDrone),
+                    typeof(IncidentWorker_RansomDemand),
+                    typeof(IncidentWorker_ShortCircuit),
+                    typeof(IncidentWorker_OrbitalTraderArrival)
+
+                }.SelectMany(it => it.AllSubclassesNonAbstract().Concat(it)).ToArray().Contains(id.workerClass) || 
+                    new[] { "Disease_FibrousMechanites", "Disease_SensoryMechanites", "RaidEnemyEscapeShip" }.Contains(id.defName)).Cast<Def>());
+
             RemoveStuff(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
 
             MethodInfo resolveDesignatorsAgain = typeof(DesignationCategoryDef).GetMethod("ResolveDesignators", BindingFlags.NonPublic | BindingFlags.Instance);

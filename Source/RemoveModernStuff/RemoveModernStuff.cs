@@ -80,6 +80,10 @@ namespace TheThirdAge
                 }.SelectMany(it => it.AllSubclassesNonAbstract().Concat(it)).ToArray().Contains(id.workerClass) || 
                     new[] { "Disease_FibrousMechanites", "Disease_SensoryMechanites", "RaidEnemyEscapeShip" }.Contains(id.defName)).Cast<Def>());
 
+
+
+            RemoveStuff(typeof(DefDatabase<RoadDef>), DefDatabase<RoadDef>.AllDefs.Where(rd => new[] { "AncientAsphaltRoad", "AncientAsphaltHighway" }.Contains(rd.defName)).Cast<Def>());
+
             RemoveStuff(typeof(DefDatabase<RaidStrategyDef>), DefDatabase<RaidStrategyDef>.AllDefs.Where(rs => typeof(ScenPart_ThingCount).IsAssignableFrom(rs.workerClass)).Cast<Def>());
 
             RemoveStuff(typeof(DefDatabase<ThingDef>), things.Cast<Def>());

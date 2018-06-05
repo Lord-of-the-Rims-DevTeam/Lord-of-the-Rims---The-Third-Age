@@ -8,7 +8,9 @@ using Verse;
 
 namespace TheThirdAge
 {
+    using System.Xml;
     using Harmony;
+    using JetBrains.Annotations;
 
     [StaticConstructorOnStartup]
     public static class RemoveModernStuff
@@ -93,6 +95,23 @@ namespace TheThirdAge
                 removedDefs++;
                 mi.Invoke(null, new object[] { defs.First() });
             }
+        }
+    }
+
+    [UsedImplicitly]
+    public class PatchOperationRemoveModernStuff : PatchOperation
+    {
+        private static readonly PatchOperationRemove removeOperation = new PatchOperationRemove();
+        private static readonly Traverse setXpathTraverse = Traverse.Create(root: removeOperation).Field(name: "xpath");
+        private static readonly string xpath = $"//techLevel[.='{string.Join(separator: "' or .='", value: Enum.GetValues(enumType: typeof(TechLevel)).Cast<TechLevel>().Where(predicate: tl => tl > RemoveModernStuff.maxTechLevel).Select(selector: tl => tl.ToString()).ToArray())}']/..";
+
+        protected override bool ApplyWorker(XmlDocument xml)
+        {
+            /*
+            setXpathTraverse.SetValue(value: xpath);
+            removeOperation.Apply(xml: xml);
+            */
+            return true;
         }
     }
 }

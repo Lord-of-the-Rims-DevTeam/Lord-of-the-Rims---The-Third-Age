@@ -1,0 +1,4 @@
+<Patch>
+	<Operation Class="TheThirdAge.PatchOperationRemoveModernStuff">
+	</Operation>
+</Patch>

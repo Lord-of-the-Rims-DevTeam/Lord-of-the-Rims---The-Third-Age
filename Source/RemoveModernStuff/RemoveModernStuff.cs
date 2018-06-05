@@ -88,7 +88,7 @@ namespace TheThirdAge
 
             RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
 
-            
+            RemoveStuffFromDatabase(typeof(DefDatabase<TraitDef>), new []{ nameof(TraitDefOf.Prosthophobe), "Prosthophile"}.Select(TraitDef.Named).Cast<Def>());
 
             MethodInfo resolveDesignatorsAgain = typeof(DesignationCategoryDef).GetMethod("ResolveDesignators", BindingFlags.NonPublic | BindingFlags.Instance);
             foreach (DesignationCategoryDef dcd in DefDatabase<DesignationCategoryDef>.AllDefs)

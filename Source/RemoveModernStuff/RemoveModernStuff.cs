@@ -24,8 +24,8 @@ namespace TheThirdAge
             IEnumerable<ResearchProjectDef> projects = DefDatabase<ResearchProjectDef>.AllDefs.Where(rpd => rpd.techLevel > maxTechLevel);
             IEnumerable<ThingDef> things = DefDatabase<ThingDef>.AllDefs.Where(td => td.techLevel > maxTechLevel || (td.researchPrerequisites?.Any(rpd => projects.Contains(rpd)) ?? false) || td.defName == "Gun_Revolver");
             
-            RemoveStuff(typeof(DefDatabase<RecipeDef>), DefDatabase<RecipeDef>.AllDefs.Where(rd => rd.products.Any(tcc => things.Contains(tcc.thingDef)) || rd.AllRecipeUsers.All(td => things.Contains(td)) || projects.Contains(rd.researchPrerequisite)).Cast<Def>());
-            RemoveStuff(typeof(DefDatabase<ResearchProjectDef>), projects.Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<RecipeDef>), DefDatabase<RecipeDef>.AllDefs.Where(rd => rd.products.Any(tcc => things.Contains(tcc.thingDef)) || rd.AllRecipeUsers.All(td => things.Contains(td)) || projects.Contains(rd.researchPrerequisite)).Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<ResearchProjectDef>), projects.Cast<Def>());
 
             FieldInfo getThingInfo = typeof(ScenPart_ThingCount).GetField("thingDef", BindingFlags.NonPublic | BindingFlags.Instance);
             foreach (ScenarioDef def in DefDatabase<ScenarioDef>.AllDefs)
@@ -64,7 +64,7 @@ namespace TheThirdAge
                 }
             }
 
-            RemoveStuff(typeof(DefDatabase<IncidentDef>), DefDatabase<IncidentDef>.AllDefs.Where(id => new[]
+            RemoveStuffFromDatabase(typeof(DefDatabase<IncidentDef>), DefDatabase<IncidentDef>.AllDefs.Where(id => new[]
                 {
                     typeof(IncidentWorker_ShipChunkDrop),
                     AccessTools.TypeByName("IncidentWorker_ShipPartCrash"),
@@ -82,18 +82,20 @@ namespace TheThirdAge
 
 
 
-            RemoveStuff(typeof(DefDatabase<RoadDef>), DefDatabase<RoadDef>.AllDefs.Where(rd => new[] { "AncientAsphaltRoad", "AncientAsphaltHighway" }.Contains(rd.defName)).Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<RoadDef>), DefDatabase<RoadDef>.AllDefs.Where(rd => new[] { "AncientAsphaltRoad", "AncientAsphaltHighway" }.Contains(rd.defName)).Cast<Def>());
 
-            RemoveStuff(typeof(DefDatabase<RaidStrategyDef>), DefDatabase<RaidStrategyDef>.AllDefs.Where(rs => typeof(ScenPart_ThingCount).IsAssignableFrom(rs.workerClass)).Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<RaidStrategyDef>), DefDatabase<RaidStrategyDef>.AllDefs.Where(rs => typeof(ScenPart_ThingCount).IsAssignableFrom(rs.workerClass)).Cast<Def>());
 
-            RemoveStuff(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
+
+            
 
             MethodInfo resolveDesignatorsAgain = typeof(DesignationCategoryDef).GetMethod("ResolveDesignators", BindingFlags.NonPublic | BindingFlags.Instance);
             foreach (DesignationCategoryDef dcd in DefDatabase<DesignationCategoryDef>.AllDefs)
                 resolveDesignatorsAgain.Invoke(dcd, null);
 
-            RemoveStuff(typeof(DefDatabase<PawnKindDef>), DefDatabase<PawnKindDef>.AllDefs.Where(pkd => pkd?.defaultFactionType?.defName != "PlayerColony" && (pkd.race.techLevel > maxTechLevel || pkd.defaultFactionType?.techLevel > maxTechLevel)).Cast<Def>());
-            RemoveStuff(typeof(DefDatabase<FactionDef>), DefDatabase<FactionDef>.AllDefs.Where(fd => !fd.isPlayer && fd.techLevel > maxTechLevel).Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<PawnKindDef>), DefDatabase<PawnKindDef>.AllDefs.Where(pkd => pkd?.defaultFactionType?.defName != "PlayerColony" && (pkd.race.techLevel > maxTechLevel || pkd.defaultFactionType?.techLevel > maxTechLevel)).Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<FactionDef>), DefDatabase<FactionDef>.AllDefs.Where(fd => !fd.isPlayer && fd.techLevel > maxTechLevel).Cast<Def>());
 
             foreach (MapGeneratorDef mgd in DefDatabase<MapGeneratorDef>.AllDefs)
                 mgd.GenSteps.RemoveAll(gs => gs.genStep is GenStep_SleepingMechanoids || gs.genStep is GenStep_Turrets || gs.genStep is GenStep_Power);
@@ -109,13 +111,16 @@ namespace TheThirdAge
             
         }
 
-        static void RemoveStuff(Type databaseType, IEnumerable<Def> defs)
+        static void RemoveStuffFromDatabase(Type databaseType, IEnumerable<Def> defs)
         {
-            MethodInfo mi = databaseType.GetMethod("Remove", BindingFlags.Static | BindingFlags.NonPublic);
-            while(defs.Any())
+            if (defs.Any())
             {
-                removedDefs++;
-                mi.Invoke(null, new object[] { defs.First() });
+                Traverse rm = Traverse.Create(databaseType).Method("Remove", defs.First());
+                while (defs.Any())
+                {
+                    removedDefs++;
+                    rm.GetValue(defs.First());
+                }
             }
         }
     }

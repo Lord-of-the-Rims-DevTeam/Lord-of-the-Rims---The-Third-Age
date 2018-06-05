@@ -15,16 +15,16 @@ namespace TheThirdAge
     {
         static RemoveModernStuffHarmony()
         {
-            HarmonyInstance harmony = HarmonyInstance.Create("rimworld.removemodernstuff");
+            HarmonyInstance harmony = HarmonyInstance.Create(id: "rimworld.removemodernstuff");
 
-            harmony.Patch(AccessTools.Method(typeof(PawnUtility), "IsTravelingInTransportPodWorldObject"),
-                new HarmonyMethod(typeof(RemoveModernStuffHarmony).GetMethod("IsTravelingInTransportPodWorldObject")), null);
+            harmony.Patch(original: AccessTools.Method(type: typeof(PawnUtility), name: "IsTravelingInTransportPodWorldObject"),
+                prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(IsTravelingInTransportPodWorldObject)), postfix: null);
         }
 
         //No one travels in transport pods in the medieval times
         public static bool IsTravelingInTransportPodWorldObject(Pawn pawn, ref bool __result)
         {
-            if (RemoveModernStuff.maxTechLevel <= TechLevel.Industrial)
+            if (RemoveModernStuff.MAX_TECHLEVEL <= TechLevel.Industrial)
             {
                 __result = false;
                 return false;

@@ -15,59 +15,68 @@ namespace TheThirdAge
     [StaticConstructorOnStartup]
     public static class RemoveModernStuff
     {
-        public const TechLevel maxTechLevel = TechLevel.Medieval;
-        static int removedDefs;
+        public const   TechLevel MAX_TECHLEVEL = TechLevel.Medieval;
+        private static int       removedDefs;
 
         static RemoveModernStuff()
         {
             removedDefs = 0;
-            IEnumerable<ResearchProjectDef> projects = DefDatabase<ResearchProjectDef>.AllDefs.Where(rpd => rpd.techLevel > maxTechLevel);
-            IEnumerable<ThingDef> things = DefDatabase<ThingDef>.AllDefs.Where(td => td.techLevel > maxTechLevel || (td.researchPrerequisites?.Any(rpd => projects.Contains(rpd)) ?? false) || td.defName == "Gun_Revolver");
-            
-            RemoveStuffFromDatabase(typeof(DefDatabase<RecipeDef>), DefDatabase<RecipeDef>.AllDefs.Where(rd => rd.products.Any(tcc => things.Contains(tcc.thingDef)) || rd.AllRecipeUsers.All(td => things.Contains(td)) || projects.Contains(rd.researchPrerequisite)).Cast<Def>());
-            RemoveStuffFromDatabase(typeof(DefDatabase<ResearchProjectDef>), projects.Cast<Def>());
 
-            FieldInfo getThingInfo = typeof(ScenPart_ThingCount).GetField("thingDef", BindingFlags.NonPublic | BindingFlags.Instance);
+            IEnumerable<ResearchProjectDef> projects = DefDatabase<ResearchProjectDef>.AllDefs.Where(predicate: rpd => rpd.techLevel > MAX_TECHLEVEL);
+            ThingDef[] things = DefDatabase<ThingDef>.AllDefs.Where(predicate: td =>
+                td.techLevel > MAX_TECHLEVEL || (td.researchPrerequisites?.Any(predicate: rpd => projects.Contains(value: rpd)) ?? false) || td.defName == "Gun_Revolver").ToArray();
+
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<RecipeDef>),
+                defs: DefDatabase<RecipeDef>.AllDefs.Where(predicate: rd =>
+                    rd.products.Any(predicate: tcc => things.Contains(value: tcc.thingDef)) || rd.AllRecipeUsers.All(predicate: td => things.Contains(value: td)) ||
+                    projects.Contains(value: rd.researchPrerequisite)).Cast<Def>());
+
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<ResearchProjectDef>), defs: projects.Cast<Def>());
+            
+            FieldInfo getThingInfo = typeof(ScenPart_ThingCount).GetField(name: "thingDef", bindingAttr: BindingFlags.NonPublic | BindingFlags.Instance);
             foreach (ScenarioDef def in DefDatabase<ScenarioDef>.AllDefs)
                 foreach (ScenPart sp in def.scenario.AllParts)
-                    if (typeof(ScenPart_ThingCount).IsAssignableFrom(sp.GetType()) && things.Contains((ThingDef) getThingInfo.GetValue(sp)))
-                        def.scenario.RemovePart(sp);
-
+                    if (sp is ScenPart_ThingCount && things.Contains(value: (ThingDef) getThingInfo?.GetValue(obj: sp)))
+                        def.scenario.RemovePart(part: sp);
+            
             foreach (ThingCategoryDef thingCategoryDef in DefDatabase<ThingCategoryDef>.AllDefs)
-                thingCategoryDef.childThingDefs.RemoveAll(things.Contains);
+                thingCategoryDef.childThingDefs.RemoveAll(match: things.Contains);
 
-            ItemCollectionGeneratorUtility.allGeneratableItems.RemoveAll(things.Contains);
-
+            ItemCollectionGeneratorUtility.allGeneratableItems.RemoveAll(match: things.Contains);
+            
             foreach (Type type in typeof(ItemCollectionGenerator_Standard).AllSubclassesNonAbstract())
-                type.GetMethod("Reset").Invoke(null, null);
-
+                type.GetMethod(name: "Reset")?.Invoke(obj: null, parameters: null);
+            
             foreach (TraderKindDef tkd in DefDatabase<TraderKindDef>.AllDefs)
             {
                 for (int i = tkd.stockGenerators.Count - 1; i >= 0; i--)
                 {
-                    StockGenerator stockGenerator = tkd.stockGenerators[i];
+                    StockGenerator stockGenerator = tkd.stockGenerators[index: i];
 
-                    if (stockGenerator is StockGenerator_SingleDef sd && things.Contains(Traverse.Create(sd).Field("thingDef").GetValue<ThingDef>()))
-                        tkd.stockGenerators.Remove(stockGenerator);
-                    if (stockGenerator is StockGenerator_MultiDef md)
+                    switch (stockGenerator)
                     {
-                        Traverse thingListTraverse = Traverse.Create(md).Field("thingDefs");
-                        List<ThingDef> thingList = thingListTraverse.GetValue<List<ThingDef>>();
-                        thingList.RemoveAll(things.Contains);
+                        case StockGenerator_SingleDef sd when things.Contains(value: Traverse.Create(root: sd).Field(name: "thingDef").GetValue<ThingDef>()):
+                            tkd.stockGenerators.Remove(item: stockGenerator);
+                            break;
+                        case StockGenerator_MultiDef md:
+                            Traverse       thingListTraverse = Traverse.Create(root: md).Field(name: "thingDefs");
+                            List<ThingDef> thingList         = thingListTraverse.GetValue<List<ThingDef>>();
+                            thingList.RemoveAll(match: things.Contains);
 
-                        if (thingList.NullOrEmpty())
-                            tkd.stockGenerators.Remove(stockGenerator);
-                        else
-                            thingListTraverse.SetValue(thingList);
+                            if (thingList.NullOrEmpty())
+                                tkd.stockGenerators.Remove(item: stockGenerator);
+                            else
+                                thingListTraverse.SetValue(value: thingList);
+                            break;
                     }
-
                 }
             }
-
-            RemoveStuffFromDatabase(typeof(DefDatabase<IncidentDef>), DefDatabase<IncidentDef>.AllDefs.Where(id => new[]
+            
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<IncidentDef>), defs: DefDatabase<IncidentDef>.AllDefs.Where(predicate: id => new[]
                 {
                     typeof(IncidentWorker_ShipChunkDrop),
-                    AccessTools.TypeByName("IncidentWorker_ShipPartCrash"),
+                    AccessTools.TypeByName(
+                        name: "IncidentWorker_ShipPartCrash"),
                     typeof(IncidentWorker_JourneyOffer),
                     typeof(IncidentWorker_ResourcePodCrash),
                     typeof(IncidentWorker_RefugeePodCrash),
@@ -76,51 +85,64 @@ namespace TheThirdAge
                     typeof(IncidentWorker_ShortCircuit),
                     typeof(IncidentWorker_OrbitalTraderArrival),
                     typeof(IncidentWorker_PsychicSoothe)
+                }.SelectMany(selector: it =>
+                    it.AllSubclassesNonAbstract().Concat(rhs: it))
+                .ToArray().Contains(value: id.workerClass) ||
+                new[]
+                {
+                    "Disease_FibrousMechanites",
+                    "Disease_SensoryMechanites",
+                    "RaidEnemyEscapeShip"
+                }.Contains(value: id.defName)).Cast<Def>());
 
-                }.SelectMany(it => it.AllSubclassesNonAbstract().Concat(it)).ToArray().Contains(id.workerClass) || 
-                    new[] { "Disease_FibrousMechanites", "Disease_SensoryMechanites", "RaidEnemyEscapeShip" }.Contains(id.defName)).Cast<Def>());
+            
 
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<RoadDef>),
+                defs: DefDatabase<RoadDef>.AllDefs.Where(predicate: rd => new[] {"AncientAsphaltRoad", "AncientAsphaltHighway"}.Contains(value: rd.defName)).Cast<Def>());
 
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<RaidStrategyDef>),
+                defs: DefDatabase<RaidStrategyDef>.AllDefs.Where(predicate: rs => typeof(ScenPart_ThingCount).IsAssignableFrom(c: rs.workerClass)).Cast<Def>());
 
-            RemoveStuffFromDatabase(typeof(DefDatabase<RoadDef>), DefDatabase<RoadDef>.AllDefs.Where(rd => new[] { "AncientAsphaltRoad", "AncientAsphaltHighway" }.Contains(rd.defName)).Cast<Def>());
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<ThingDef>), defs: things);
 
-            RemoveStuffFromDatabase(typeof(DefDatabase<RaidStrategyDef>), DefDatabase<RaidStrategyDef>.AllDefs.Where(rs => typeof(ScenPart_ThingCount).IsAssignableFrom(rs.workerClass)).Cast<Def>());
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<TraitDef>),
+                defs: DefDatabase<TraitDef>.AllDefs.Where(predicate: td => new[] {nameof(TraitDefOf.Prosthophobe), "Prosthophile"}.Contains(value: td.defName)).Cast<Def>());
 
-            RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
-
-            RemoveStuffFromDatabase(typeof(DefDatabase<TraitDef>), DefDatabase<TraitDef>.AllDefs.Where(td => new []{ nameof(TraitDefOf.Prosthophobe), "Prosthophile"}.Contains(td.defName)).Cast<Def>());
-
-            MethodInfo resolveDesignatorsAgain = typeof(DesignationCategoryDef).GetMethod("ResolveDesignators", BindingFlags.NonPublic | BindingFlags.Instance);
+            MethodInfo resolveDesignatorsAgain = typeof(DesignationCategoryDef).GetMethod(name: "ResolveDesignators", bindingAttr: BindingFlags.NonPublic | BindingFlags.Instance);
             foreach (DesignationCategoryDef dcd in DefDatabase<DesignationCategoryDef>.AllDefs)
-                resolveDesignatorsAgain.Invoke(dcd, null);
+                resolveDesignatorsAgain?.Invoke(obj: dcd, parameters: null);
 
-            RemoveStuffFromDatabase(typeof(DefDatabase<PawnKindDef>), DefDatabase<PawnKindDef>.AllDefs.Where(pkd => (!pkd?.defaultFactionType?.isPlayer ?? false) && (pkd.race.techLevel > maxTechLevel || pkd.defaultFactionType?.techLevel > maxTechLevel)).Cast<Def>());
-            RemoveStuffFromDatabase(typeof(DefDatabase<FactionDef>), DefDatabase<FactionDef>.AllDefs.Where(fd => !fd.isPlayer && fd.techLevel > maxTechLevel).Cast<Def>());
-
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<PawnKindDef>),
+                defs: DefDatabase<PawnKindDef>.AllDefs
+                   .Where(predicate: pkd => (!pkd.defaultFactionType?.isPlayer ?? false) && (pkd.race.techLevel > MAX_TECHLEVEL || pkd.defaultFactionType?.techLevel > MAX_TECHLEVEL)).Cast<Def>());
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<FactionDef>),
+                defs: DefDatabase<FactionDef>.AllDefs.Where(predicate: fd => !fd.isPlayer && fd.techLevel > MAX_TECHLEVEL).Cast<Def>());
+            
             foreach (MapGeneratorDef mgd in DefDatabase<MapGeneratorDef>.AllDefs)
-                mgd.GenSteps.RemoveAll(gs => gs.genStep is GenStep_SleepingMechanoids || gs.genStep is GenStep_Turrets || gs.genStep is GenStep_Power);
+                mgd.GenSteps.RemoveAll(match: gs => gs.genStep is GenStep_SleepingMechanoids || gs.genStep is GenStep_Turrets || gs.genStep is GenStep_Power);
 
             foreach (RuleDef rd in DefDatabase<RuleDef>.AllDefs)
             {
-                rd.resolvers.RemoveAll(sr => sr is SymbolResolver_AncientCryptosleepCasket || sr is SymbolResolver_ChargeBatteries || sr is SymbolResolver_EdgeMannedMortar || sr is SymbolResolver_FirefoamPopper || sr is SymbolResolver_MannedMortar || sr is SymbolResolver_OutdoorLighting);
+                rd.resolvers.RemoveAll(match: sr =>
+                    sr is SymbolResolver_AncientCryptosleepCasket || sr is SymbolResolver_ChargeBatteries || sr is SymbolResolver_EdgeMannedMortar || sr is SymbolResolver_FirefoamPopper ||
+                    sr is SymbolResolver_MannedMortar             || sr is SymbolResolver_OutdoorLighting);
                 if (rd.resolvers.Count == 0)
-                    rd.resolvers.Add(new SymbolResolver_AddWortToFermentingBarrels());
+                    rd.resolvers.Add(item: new SymbolResolver_AddWortToFermentingBarrels());
             }
 
-            Log.Message("Removed " + removedDefs + " modern defs");
-            
+            Log.Message(text: "Removed " + removedDefs + " modern defs");
+
         }
 
-        static void RemoveStuffFromDatabase(Type databaseType, IEnumerable<Def> defs)
+        private static void RemoveStuffFromDatabase(Type databaseType, [NotNull] IEnumerable<Def> defs)
         {
-            if (defs.Any())
+            IEnumerable<Def> enumerable = defs as Def[] ?? defs.ToArray();
+            if (!enumerable.Any()) return;
+            Traverse rm = Traverse.Create(type: databaseType).Method("Remove", enumerable.First());
+            foreach (Def def in enumerable)
             {
-                Traverse rm = Traverse.Create(databaseType).Method("Remove", defs.First());
-                while (defs.Any())
-                {
-                    removedDefs++;
-                    rm.GetValue(defs.First());
-                }
+                removedDefs++;
+                rm.GetValue(def);
             }
         }
     }
@@ -128,10 +150,11 @@ namespace TheThirdAge
     [UsedImplicitly]
     public class PatchOperationRemoveModernStuff : PatchOperation
     {
+        /*
         private static readonly PatchOperationRemove removeOperation = new PatchOperationRemove();
         private static readonly Traverse setXpathTraverse = Traverse.Create(root: removeOperation).Field(name: "xpath");
-        private static readonly string xpath = $"//techLevel[.='{string.Join(separator: "' or .='", value: Enum.GetValues(enumType: typeof(TechLevel)).Cast<TechLevel>().Where(predicate: tl => tl > RemoveModernStuff.maxTechLevel).Select(selector: tl => tl.ToString()).ToArray())}']/..";
-
+        private static readonly string xpath = $"//techLevel[.='{string.Join(separator: "' or .='", value: Enum.GetValues(enumType: typeof(TechLevel)).Cast<TechLevel>().Where(predicate: tl => tl > RemoveModernStuff.MAX_TECHLEVEL).Select(selector: tl => tl.ToString()).ToArray())}']/..";
+        */
         protected override bool ApplyWorker(XmlDocument xml)
         {
             /*
@@ -140,5 +163,6 @@ namespace TheThirdAge
             */
             return true;
         }
+
     }
 }

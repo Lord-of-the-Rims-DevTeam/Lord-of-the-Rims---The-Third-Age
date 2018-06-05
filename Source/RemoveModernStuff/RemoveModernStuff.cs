@@ -88,13 +88,13 @@ namespace TheThirdAge
 
             RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), things.Cast<Def>());
 
-            RemoveStuffFromDatabase(typeof(DefDatabase<TraitDef>), new []{ nameof(TraitDefOf.Prosthophobe), "Prosthophile"}.Select(TraitDef.Named).Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<TraitDef>), DefDatabase<TraitDef>.AllDefs.Where(td => new []{ nameof(TraitDefOf.Prosthophobe), "Prosthophile"}.Contains(td.defName)).Cast<Def>());
 
             MethodInfo resolveDesignatorsAgain = typeof(DesignationCategoryDef).GetMethod("ResolveDesignators", BindingFlags.NonPublic | BindingFlags.Instance);
             foreach (DesignationCategoryDef dcd in DefDatabase<DesignationCategoryDef>.AllDefs)
                 resolveDesignatorsAgain.Invoke(dcd, null);
 
-            RemoveStuffFromDatabase(typeof(DefDatabase<PawnKindDef>), DefDatabase<PawnKindDef>.AllDefs.Where(pkd => pkd?.defaultFactionType?.defName != "PlayerColony" && (pkd.race.techLevel > maxTechLevel || pkd.defaultFactionType?.techLevel > maxTechLevel)).Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<PawnKindDef>), DefDatabase<PawnKindDef>.AllDefs.Where(pkd => (!pkd?.defaultFactionType?.isPlayer ?? false) && (pkd.race.techLevel > maxTechLevel || pkd.defaultFactionType?.techLevel > maxTechLevel)).Cast<Def>());
             RemoveStuffFromDatabase(typeof(DefDatabase<FactionDef>), DefDatabase<FactionDef>.AllDefs.Where(fd => !fd.isPlayer && fd.techLevel > maxTechLevel).Cast<Def>());
 
             foreach (MapGeneratorDef mgd in DefDatabase<MapGeneratorDef>.AllDefs)

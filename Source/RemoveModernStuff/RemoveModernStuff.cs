@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using RimWorld;
-using RimWorld.BaseGen;
-using Verse;
-
-namespace TheThirdAge
+﻿namespace TheThirdAge
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
     using System.Xml;
     using Harmony;
     using JetBrains.Annotations;
+    using RimWorld;
+    using RimWorld.BaseGen;
+    using Verse;
 
     [StaticConstructorOnStartup]
     public static class RemoveModernStuff
@@ -95,10 +94,18 @@ namespace TheThirdAge
                     "RaidEnemyEscapeShip"
                 }.Contains(value: id.defName)).Cast<Def>());
 
-            
 
-            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<RoadDef>),
-                defs: DefDatabase<RoadDef>.AllDefs.Where(predicate: rd => new[] {"AncientAsphaltRoad", "AncientAsphaltHighway"}.Contains(value: rd.defName)).Cast<Def>());
+            RoadDef[] targetRoads = {RoadDefOf.AncientAsphaltRoad, RoadDefOf.AncientAsphaltHighway};
+            RoadDef originalRoad = DefDatabase<RoadDef>.GetNamed(defName: "StoneRoad");
+
+            List<string> fieldNames = AccessTools.GetFieldNames(type: typeof(RoadDef));
+            fieldNames.Remove(item: "defName");
+            foreach (FieldInfo fi in fieldNames.Select(selector: name => AccessTools.Field(type: typeof(RoadDef), name: name)))
+            {
+                object fieldValue = fi.GetValue(obj: originalRoad);
+                foreach (RoadDef targetRoad in targetRoads) fi.SetValue(obj: targetRoad, value: fieldValue);
+            }
+
 
             RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<RaidStrategyDef>),
                 defs: DefDatabase<RaidStrategyDef>.AllDefs.Where(predicate: rs => typeof(ScenPart_ThingCount).IsAssignableFrom(c: rs.workerClass)).Cast<Def>());

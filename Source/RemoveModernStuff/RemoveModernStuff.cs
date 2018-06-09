@@ -23,7 +23,7 @@
 
             IEnumerable<ResearchProjectDef> projects = DefDatabase<ResearchProjectDef>.AllDefs.Where(predicate: rpd => rpd.techLevel > MAX_TECHLEVEL);
             ThingDef[] things = DefDatabase<ThingDef>.AllDefs.Where(predicate: td =>
-                td.techLevel > MAX_TECHLEVEL || (td.researchPrerequisites?.Any(predicate: rpd => projects.Contains(value: rpd)) ?? false) || td.defName == "Gun_Revolver").ToArray();
+                td.techLevel > MAX_TECHLEVEL || (td.researchPrerequisites?.Any(predicate: rpd => projects.Contains(value: rpd)) ?? false) || new[] {"Gun_Revolver", "VanometricPowerCell", "PsychicEmanator", "InfiniteChemreactor", "Joywire", "Painstopper" }.Contains(value: td.defName)).ToArray();
 
             RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<RecipeDef>),
                 defs: DefDatabase<RecipeDef>.AllDefs.Where(predicate: rd =>
@@ -40,11 +40,6 @@
             
             foreach (ThingCategoryDef thingCategoryDef in DefDatabase<ThingCategoryDef>.AllDefs)
                 thingCategoryDef.childThingDefs.RemoveAll(match: things.Contains);
-
-            ItemCollectionGeneratorUtility.allGeneratableItems.RemoveAll(match: things.Contains);
-            
-            foreach (Type type in typeof(ItemCollectionGenerator_Standard).AllSubclassesNonAbstract())
-                type.GetMethod(name: "Reset")?.Invoke(obj: null, parameters: null);
             
             foreach (TraderKindDef tkd in DefDatabase<TraderKindDef>.AllDefs)
             {
@@ -106,11 +101,19 @@
                 foreach (RoadDef targetRoad in targetRoads) fi.SetValue(obj: targetRoad, value: fieldValue);
             }
 
+            RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<HediffDef>), defs: new [] { HediffDefOf.Gunshot });
 
             RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<RaidStrategyDef>),
                 defs: DefDatabase<RaidStrategyDef>.AllDefs.Where(predicate: rs => typeof(ScenPart_ThingCount).IsAssignableFrom(c: rs.workerClass)).Cast<Def>());
 
+            //            ItemCollectionGeneratorUtility.allGeneratableItems.RemoveAll(match: things.Contains);
+            //
+            //            foreach (Type type in typeof(ItemCollectionGenerator_Standard).AllSubclassesNonAbstract())
+            //                type.GetMethod(name: "Reset")?.Invoke(obj: null, parameters: null);
+
             RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<ThingDef>), defs: things);
+
+            ItemCollectionGeneratorUtility.Reset();
 
             RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<TraitDef>),
                 defs: DefDatabase<TraitDef>.AllDefs.Where(predicate: td => new[] {nameof(TraitDefOf.Prosthophobe), "Prosthophile"}.Contains(value: td.defName)).Cast<Def>());

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using Harmony;
 using RimWorld;
-using RimWorld.BaseGen;
-using RimWorld.Planet;
 using Verse;
 
 namespace TheThirdAge
@@ -23,6 +18,15 @@ namespace TheThirdAge
 
             foreach (Type type in typeof(ItemCollectionGenerator_Standard).AllSubclassesNonAbstract())
                 harmony.Patch(original: AccessTools.Method(type: type, name: "Generate", parameters: new []{typeof(ItemCollectionGeneratorParams)}), prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(ItemCollectionGeneratorGeneratePrefix)), postfix: null);
+
+            harmony.Patch(original: AccessTools.Method(type: AccessTools.TypeByName(name: "AgeInjuryUtility"), name: "RandomOldInjuryDamageType"),
+                prefix: null, postfix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(RandomOldInjuryDamageTypePostfix)));
+        }
+
+        public static void RandomOldInjuryDamageTypePostfix(ref DamageDef __result)
+        {
+            if (__result == DamageDefOf.Bullet)
+                __result = DamageDefOf.Scratch;
         }
 
         public static void ItemCollectionGeneratorGeneratePrefix(ref ItemCollectionGeneratorParams parms)

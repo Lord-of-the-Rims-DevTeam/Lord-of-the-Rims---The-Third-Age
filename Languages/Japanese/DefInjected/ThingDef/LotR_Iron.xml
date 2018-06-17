@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Iron -->
+
+  <LotR_Iron.label>アイアン</LotR_Iron.label>
+  <LotR_Iron.description>アイアンは建築物や道具、武器の製造に利用される頑丈な天然資源です。</LotR_Iron.description>
+  <LotR_Iron.stuffProps.stuffAdjective>アイアン製</LotR_Iron.stuffProps.stuffAdjective>
+
+  <LotR_ChunkSlagIron.label>鉄くずの塊(アイアン)</LotR_ChunkSlagIron.label>
+  <LotR_ChunkSlagIron.description>アイアンを含んだ鉄くずの塊です。 今のままではそれほど役に立ちませんが、そこからアイアンを精錬することは可能です。</LotR_ChunkSlagIron.description>
+
+  <LotR_MineableIron.label>アイアン鉱脈</LotR_MineableIron.label>
+  <LotR_MineableIron.description>自然界で普通に鉱脈が見つかります。アイアンを豊富に含んでいます。</LotR_MineableIron.description>
+
+  <LotR_Mithril.label>ミスリル</LotR_Mithril.label>
+  <LotR_Mithril.description>シルバーに似た羽のように軽い素材で、スチールよりも強くて軽いです。 ミスリルは世界で知られている素材の中でも希少であり、非常に貴重なものとなっています。</LotR_Mithril.description>
+  <LotR_Mithril.stuffProps.stuffAdjective>ミスリル製</LotR_Mithril.stuffProps.stuffAdjective>
+
+
+</LanguageData>

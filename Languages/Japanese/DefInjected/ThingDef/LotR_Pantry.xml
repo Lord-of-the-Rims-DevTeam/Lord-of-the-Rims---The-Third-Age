@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LotR_PantryShelf.label>配膳ロッカー</LotR_PantryShelf.label>
+  <LotR_PantryShelf.description>これで保存されている、肉を材料に使っていない食品は、腐敗する速度がとても遅くなります。</LotR_PantryShelf.description>
+  <LotR_PantryShelf_Blueprint.label>配膳ロッカー(設計)</LotR_PantryShelf_Blueprint.label>
+  <LotR_PantryShelf_Blueprint_Install.label>配膳ロッカー(移動先)</LotR_PantryShelf_Blueprint_Install.label>
+  <LotR_PantryShelf_Frame.label>配膳ロッカー(施工)</LotR_PantryShelf_Frame.label>
+  <LotR_PantryShelf_Frame.description>これで保存されている、肉を材料に使っていない食品は、腐敗する速度がとても遅くなります。</LotR_PantryShelf_Frame.description>
+
+  <LotR_SaltBarrel.label>塩漬け壺</LotR_SaltBarrel.label>
+  <LotR_SaltBarrel.description>これで保存された食品は腐敗する速度がとても遅くなります。</LotR_SaltBarrel.description>
+  <LotR_SaltBarrel_Blueprint.label>塩漬け壺(設計)</LotR_SaltBarrel_Blueprint.label>
+  <LotR_SaltBarrel_Blueprint_Install.label>塩漬け壺(移動先)</LotR_SaltBarrel_Blueprint_Install.label>
+  <LotR_SaltBarrel_Frame.label>塩漬け壺(施工)</LotR_SaltBarrel_Frame.label>
+  <LotR_SaltBarrel_Frame.description>これで保存された食品は腐敗する速度がとても遅くなります。</LotR_SaltBarrel_Frame.description>
+
+
+</LanguageData>

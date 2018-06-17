@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Iron -->
+
+  <LotR_ExtractSteelFromIron.label>アイアンを精錬する</LotR_ExtractSteelFromIron.label>
+  <LotR_ExtractSteelFromIron.description>高温を利用して鉄から有用なスチールを精錬します。</LotR_ExtractSteelFromIron.description>
+  <LotR_ExtractSteelFromIron.jobString>アイアンを精錬中</LotR_ExtractSteelFromIron.jobString>
+
+
+</LanguageData>

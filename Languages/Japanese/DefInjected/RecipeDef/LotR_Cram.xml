@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LotR_MakeCram.label>クラム</LotR_MakeCram.label>
+  <LotR_MakeCram.description>生肉と生野菜の食材を混ぜ合わせてビスケット状に固めて、賞味期限のない新鮮な保存食であるクラム(たらふく)を準備します。使われた材料の多くは捨てられます。</LotR_MakeCram.description>
+  <LotR_MakeCram.jobString>クラムを調理中</LotR_MakeCram.jobString>
+
+
+</LanguageData>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Smithing -->
+
+  <LotR_DoSmithing.label>鍛冶</LotR_DoSmithing.label>
+  <LotR_DoSmithing.verb>で鍛える</LotR_DoSmithing.verb>
+  <LotR_DoSmithing.gerund>で鍛える</LotR_DoSmithing.gerund>
+
+
+</LanguageData>

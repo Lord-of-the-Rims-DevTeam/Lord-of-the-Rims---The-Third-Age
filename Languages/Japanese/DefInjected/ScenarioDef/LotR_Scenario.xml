@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LotR_SimpleColony.label>ロード・オブ・ザ・リム－第三紀の入植地</LotR_SimpleColony.label>
+  <LotR_SimpleColony.description>昔々、太古と呼ぶほどには古くなく、人間の歴史が記録されるようになるよりもずっと前に、この惑星には中つ国と呼ばれた時代がありました。そして何人かの自由の民たちが集まり、自分たちの社会を作り上げました。</LotR_SimpleColony.description>
+  <LotR_SimpleColony.scenario.name>ロード・オブ・ザ・リム－第三紀の入植地</LotR_SimpleColony.scenario.name>
+  <LotR_SimpleColony.scenario.summary>三人の入植者 -- 古典的なリムワールド体験シナリオのリミックスです。</LotR_SimpleColony.scenario.summary>
+  <LotR_SimpleColony.scenario.description>昔々、太古と呼ぶほどには古くなく、人間の歴史が記録されるようになるよりもずっと前に、この惑星には中つ国と呼ばれた時代がありました。そして何人かの自由の民たちが集まり、自分たちの社会を作り上げました。</LotR_SimpleColony.scenario.description>
+  <LotR_SimpleColony.scenario.parts.12.text>昔々、太古と呼ぶほどには古くなく、人間の歴史が記録されるようになるよりもずっと前に、この惑星には中つ国と呼ばれた時代がありました。そして何人かの自由の民たちが集まり、自分たちの社会を作り上げました。 彼らは成功したり失敗したり希望を持ち、その夢を叶え、長い歴史の彼方に過ぎ去ったのかもしれません。</LotR_SimpleColony.scenario.parts.12.text>
+
+  <LotR_SimpleFellowship.label>ロード・オブ・ザ・リム－第三紀の仲間たち</LotR_SimpleFellowship.label>
+  <LotR_SimpleFellowship.description>昔々、太古と呼ぶほどには古くなく、人間の歴史が記録されるようになるよりもずっと前に、この惑星には中つ国と呼ばれた時代がありました。 大きな決意と目的を持って9人の旅の仲間が集まりました。 彼らがこれから何をするのかを決めるのはあなた次第です。</LotR_SimpleFellowship.description>
+  <LotR_SimpleFellowship.scenario.name>ロード・オブ・ザ・リム－第三紀の仲間たち</LotR_SimpleFellowship.scenario.name>
+  <LotR_SimpleFellowship.scenario.summary>九人の旅の仲間でスタートします。</LotR_SimpleFellowship.scenario.summary>
+  <LotR_SimpleFellowship.scenario.description>昔々、太古と呼ぶほどには古くなく、人間の歴史が記録されるようになるよりもずっと前に、この惑星には中つ国と呼ばれた時代がありました。 大きな決意と目的を持って9人の旅の仲間が集まりました。 彼らがこれから何をするのかを決めるのはあなた次第です。</LotR_SimpleFellowship.scenario.description>
+  <LotR_SimpleFellowship.scenario.parts.12.text>昔々、太古と呼ぶほどには古くなく、人間の歴史が記録されるようになるよりもずっと前に、この惑星には中つ国と呼ばれた時代がありました。 大きな決意と目的を持って9人の旅の仲間が集まりました。 彼らは成功したり失敗したり希望を持ち、その夢を叶え、長い歴史の彼方に過ぎ去ったのかもしれません。</LotR_SimpleFellowship.scenario.parts.12.text>
+
+
+</LanguageData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Smithing -->
+
+  <LotR_TableSmithy.label>鍛冶用の金床と炉</LotR_TableSmithy.label>
+  <LotR_TableSmithy.description>武器や防具を作るための中心的な製造設備です。</LotR_TableSmithy.description>
+  <LotR_TableSmithy_Blueprint.label>鍛冶用の金床と炉(設計)</LotR_TableSmithy_Blueprint.label>
+  <LotR_TableSmithy_Frame.label>鍛冶用の金床と炉(施工)</LotR_TableSmithy_Frame.label>
+  <LotR_TableSmithy_Frame.description>武器や防具を作るための中心的な製造設備です。</LotR_TableSmithy_Frame.description>
+
+
+</LanguageData>

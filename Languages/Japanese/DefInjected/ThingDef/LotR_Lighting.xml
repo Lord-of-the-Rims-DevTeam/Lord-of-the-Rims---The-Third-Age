@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LotR_WallSconce.label>トーチランプ(壁かけ)</LotR_WallSconce.label>
+  <LotR_WallSconce.description>周囲を照らすために壁に取り付けられた木製の燭台です。 人は十分な明かりが有ることで、100%完全な速度で動いたり移動したりできます。 木材を自動的に燃料補給できます。少しの熱しか出しません。</LotR_WallSconce.description>
+  <LotR_WallSconce_Blueprint.label>トーチランプ(壁かけ)(設計)</LotR_WallSconce_Blueprint.label>
+  <LotR_WallSconce_Frame.label>トーチランプ(壁かけ)(施工)</LotR_WallSconce_Frame.label>
+  <LotR_WallSconce_Frame.description>周囲を照らすために壁に取り付けられた木製の燭台です。 人は十分な明かりが有ることで、100%完全な速度で動いたり移動したりできます。 木材を自動的に燃料補給できます。少しの熱しか出しません。</LotR_WallSconce_Frame.description>
+
+
+</LanguageData>

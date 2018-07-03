@@ -15,7 +15,8 @@
       </damageData>
     </graphicData>
     <rotatable>true</rotatable>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <clearBuildingArea>false</clearBuildingArea>
     <passability>PassThroughOnly</passability>
     <pathCost>8</pathCost>
     <constructEffect>ConstructWood</constructEffect>
@@ -60,8 +61,8 @@
         <heatPushMaxTemperature>23</heatPushMaxTemperature>
       </li>
       <li Class="CompProperties_FireOverlay">
-        <fireSize>0.4</fireSize>
-        <offset>(0,0,0.2)</offset>
+        <fireSize>0.5</fireSize>
+        <offset>(0,0,0.3)</offset>
       </li>
     </comps>
     <building>

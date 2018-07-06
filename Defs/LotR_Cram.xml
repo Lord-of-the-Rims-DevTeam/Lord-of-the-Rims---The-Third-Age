@@ -74,9 +74,9 @@
       <categories>
         <li>FoodRaw</li>
       </categories>
-      <exceptedCategories>
+      <disallowedCategories>
         <li>AnimalProductRaw</li>
-      </exceptedCategories>
+      </disallowedCategories>
       <disallowedSpecialFilters>
         <li>AllowPlantFood</li>
       </disallowedSpecialFilters>
@@ -85,10 +85,10 @@
       <categories>
         <li>FoodRaw</li>
       </categories>
-      <exceptedThingDefs>
-        <li>Human_Meat</li>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
         <li>Megaspider_Meat</li>
-      </exceptedThingDefs>
+      </disallowedThingDefs>
     </defaultIngredientFilter>
     <workSkill>Cooking</workSkill>
   </RecipeDef>

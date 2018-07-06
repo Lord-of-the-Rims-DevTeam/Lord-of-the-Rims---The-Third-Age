@@ -30,7 +30,7 @@
       <li>Apparel_BasicShirt</li>
       <li>Apparel_Pants</li>
     </apparelRequired>
-    <apparelAllowHeadwearChance>0.0</apparelAllowHeadwearChance>
+    <apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
     <techHediffsChance>0.001</techHediffsChance>
     <invNutrition>0</invNutrition>
   </PawnKindDef>

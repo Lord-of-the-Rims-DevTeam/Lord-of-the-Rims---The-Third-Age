@@ -5,7 +5,7 @@
   
   
   <ThingDef Name="LotR_BuildingNaturalBase" Abstract="True">
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
     <selectable>true</selectable>
     <drawerType>MapMeshOnly</drawerType>
     <filthLeaving>RockRubble</filthLeaving>
@@ -89,7 +89,7 @@
     <designateHaulable>true</designateHaulable>
     <saveCompressible>true</saveCompressible>
     <stackLimit>1</stackLimit>
-    <tradeability>Never</tradeability>
+    <tradeability>None</tradeability>
   </ThingDef>
   
 <!-- Iron -->
@@ -123,7 +123,7 @@
       <commonality>1.00</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(108,102,105)</color>
-      <soundImpactStuff>BulletImpactMetal</soundImpactStuff>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <statFactors>
@@ -248,7 +248,7 @@
       <commonality>0.0</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(213,225,245)</color>
-      <soundImpactStuff>BulletImpactMetal</soundImpactStuff>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <statOffsets>

@@ -63,14 +63,14 @@ namespace TheThirdAge
                     {
                         sb.Append("CurrentlyRefrigerated".Translate(new object[]
                         {
-                            ticksUntilRotAtCurrentTemp.ToStringTicksToPeriodVagueMax()
+                            ticksUntilRotAtCurrentTemp.ToStringTicksToPeriodVague()
                         }) + ".");
                     }
                     else
                     {
                         sb.Append("NotRefrigerated".Translate(new object[]
                         {
-                            ticksUntilRotAtCurrentTemp.ToStringTicksToPeriodVagueMax()
+                            ticksUntilRotAtCurrentTemp.ToStringTicksToPeriodVague()
                         }) + ".");
                     }
                 }

@@ -16,6 +16,7 @@
     </graphicData>
     <rotatable>true</rotatable>
     <altitudeLayer>Building</altitudeLayer>
+    <clearBuildingArea>false</clearBuildingArea>
     <passability>PassThroughOnly</passability>
     <pathCost>8</pathCost>
     <constructEffect>ConstructWood</constructEffect>
@@ -37,6 +38,7 @@
     <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <placeWorkers>
       <li>PlaceWorker_Heater</li>
+      <li>Dwarves.PlaceWorker_WallBuilding</li>
     </placeWorkers>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <comps>
@@ -59,9 +61,15 @@
         <heatPerSecond>3.5</heatPerSecond>
         <heatPushMaxTemperature>23</heatPushMaxTemperature>
       </li>
-      <li Class="CompProperties_FireOverlay">
-        <fireSize>0.4</fireSize>
-        <offset>(0,0,0.2)</offset>
+      <li Class="CompProperties_FireOverlayRotatable">
+        <fireSize>0.45</fireSize>
+        <offset_south>(0,0,0.05)</offset_south>
+        <offset_west>(-0.4,0,0.25)</offset_west>
+        <offset_north>(0,0,0.45)</offset_north>
+        <offset_east>(0.4,0,0.25)</offset_east>
+        <dependency>Fuel</dependency>
+        <ticks>10</ticks>
+        <aboveThing>true</aboveThing>
       </li>
     </comps>
     <building>

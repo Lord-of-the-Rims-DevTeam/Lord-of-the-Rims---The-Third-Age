@@ -1,4 +1,12 @@
 <Patch>
 	<Operation Class="TheThirdAge.PatchOperationRemoveModernStuff">
 	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+	    <xpath>*/ThingDef[defName="Apparel_VestPlate"]</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+	    <xpath>*/ThingDef[defName="Apparel_PowerArmor"]</xpath>
+	</Operation>
 </Patch>

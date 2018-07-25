@@ -31,8 +31,8 @@ namespace TheThirdAge
 	    {
 		    if (TTADefOf.FueledStove is ThingDef fueldStove && fueldStove?.recipes?.Count > 0)
 		    {
-			    if (fueldStove.recipes.Any(x => x == TTADefOf.LotR_MakeCram)) return;
-				fueldStove.recipes.Add(TTADefOf.LotR_MakeCram);
+			    if (fueldStove.recipes.Any(x => x == TTADefOf.LotR_Make_Cram)) return;
+				fueldStove.recipes.Add(TTADefOf.LotR_Make_Cram);
 		    }
 	    }
 
@@ -77,7 +77,7 @@ namespace TheThirdAge
 				rotProps.daysToRotStart = 2f;
 				rotProps.rotDestroys = true;
 				d.comps.Add(rotProps);
-				d.comps.Add(new CompProperties_FoodPoisoningChance());
+				d.comps.Add(new CompProperties_FoodPoisonable());
 				d.tickerType = TickerType.Rare;
 				d.SetStatBaseValue(StatDefOf.Beauty, -20f);
 				d.alwaysHaulable = true;
@@ -102,7 +102,8 @@ namespace TheThirdAge
 				d.ingestible.foodType = FoodTypeFlags.Meat;
 				d.ingestible.preferability = FoodPreferability.RawBad;
 				DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(d.ingestible, "tasteThought", ThoughtDefOf.AteRawFood.defName);
-				d.ingestible.nutrition = td.ingestible.nutrition + 0.03f;
+                d.SetStatBaseValue(StatDefOf.Nutrition, td.GetStatValueAbstract(StatDefOf.Nutrition) + 0.03f);
+				//d.ingestible.nutrition = td.ingestible.nutrition + 0.03f;
 	            d.ingestible.ingestEffect = td.ingestible.ingestEffect;
 	            d.ingestible.ingestSound = td.ingestible.ingestSound;
 	            d.ingestible.specialThoughtDirect = td.ingestible.specialThoughtDirect;
@@ -167,7 +168,7 @@ namespace TheThirdAge
                 tt?.costList?.Any(y => y?.thingDef == ThingDefOf.Steel) ?? false))
             {
                 var tempCost = tdd.costList.FirstOrDefault(z => z.thingDef == ThingDefOf.Steel);
-                var newTempCost = new ThingCountClass(ThingDef.Named("LotR_Iron"), tempCost.count);
+                var newTempCost = new ThingDefCountClass(ThingDef.Named("LotR_Iron"), tempCost.count);
                 tdd.costList.Remove(tempCost);
                 tdd.costList.Add(newTempCost);
                 steelDefs++;
@@ -190,7 +191,7 @@ namespace TheThirdAge
             ThingDefOf.MineableSteel.building.mineableScatterCommonality = 0.0f;
             ThingDef.Named("MineablePlasteel").building.mineableScatterCommonality = 0.0f;
             ThingDef.Named("MineableUranium").building.mineableScatterCommonality = 0.0f;
-            ThingDef.Named("MineableComponents").building.mineableScatterCommonality = 0.0f;
+            ThingDef.Named("MineableComponentsIndustrial").building.mineableScatterCommonality = 0.0f;
             if (FactionDefOf.PlayerColony?.apparelStuffFilter?.Allows(ThingDef.Named("Synthread")) ?? false)
             {
                 FactionDefOf.PlayerColony.apparelStuffFilter = new ThingFilter();

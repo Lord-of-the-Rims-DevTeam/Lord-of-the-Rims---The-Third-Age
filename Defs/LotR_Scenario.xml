@@ -8,13 +8,20 @@
     <description>Your own community.</description>
     <isPlayer>true</isPlayer>
     <basicMemberKind>LotR_MedievalVillager</basicMemberKind>
+    <pawnSingular>villager</pawnSingular>
     <pawnsPlural>villagers</pawnsPlural>
     <techLevel>Medieval</techLevel>
     <backstoryCategory>Civil</backstoryCategory>
     <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
-		<baseNameMaker>NamerFactionBasePlayerColony</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionPlayerColonyRandomized</baseNameMakerPlayer>
-		<factionNameMakerPlayer>NamerFactionBasePlayerColonyRandomized</factionNameMakerPlayer>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <!-- Previous
+      <factionNameMakerPlayer>NamerFactionBasePlayerColonyRandomized</factionNameMakerPlayer>
+     -->
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <!-- Previous
+      <settlementNameMaker>NamerFactionBasePlayerColony</settlementNameMaker>
+     -->
 		<geneticVariance>1</geneticVariance>
 		<startingResearchTags>
 			<li>ClassicStart</li>
@@ -64,11 +71,11 @@
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>LotR_Cram</thingDef>
-          <count>44</count>
+          <count>240</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>HerbalMedicine</thingDef>
+          <thingDef>MedicineHerbal</thingDef>
           <count>30</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
@@ -98,16 +105,11 @@
           <count>300</count>
         </li>      
 
+        <!-- Scatter some things anywhere -->
         <li Class="ScenPart_ScatterThingsAnywhere">
           <def>ScatterThingsAnywhere</def>
           <thingDef>LotR_Iron</thingDef>
           <count>720</count>
-        </li>
-		
-        <li Class="ScenPart_ScatterThingsAnywhere">
-          <def>ScatterThingsAnywhere</def>
-          <thingDef>LotR_Cram</thingDef>
-          <count>7</count>
         </li>
         
         <!-- Game start dialog -->
@@ -156,16 +158,17 @@
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>LotR_Cram</thingDef>
-          <count>44</count>
+          <count>720</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>HerbalMedicine</thingDef>
+          <thingDef>MedicineHerbal</thingDef>
           <count>30</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>MeleeWeapon_Knife</thingDef>
+          <stuff>LotR_Mithril</stuff>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
@@ -174,7 +177,7 @@
         </li>
         <li Class="ScenPart_StartingAnimal">
           <def>StartingAnimal</def>
-          <count>1</count>
+          <count>4</count>
           <bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
         </li>
 
@@ -194,12 +197,6 @@
           <def>ScatterThingsAnywhere</def>
           <thingDef>LotR_Iron</thingDef>
           <count>720</count>
-        </li>
-		
-        <li Class="ScenPart_ScatterThingsAnywhere">
-          <def>ScatterThingsAnywhere</def>
-          <thingDef>LotR_Cram</thingDef>
-          <count>7</count>
         </li>
         
         <!-- Game start dialog -->

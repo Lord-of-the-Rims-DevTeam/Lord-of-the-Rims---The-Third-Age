@@ -6,31 +6,33 @@
     <defName>LotR_Cram</defName>
     <label>cram</label>
     <description>An indefinitely fresh biscuit formed from a combination of raw meat and raw plant ingredients. Not very flavorful, but useful for supplying long journeys.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/jecrellCram</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
-    <thingCategories>
-      <li>Foods</li>
-    </thingCategories>
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MarketValue>1.5</MarketValue>
+      <MarketValue>1.4</MarketValue>
       <Mass>0.018</Mass>
+      <Flammability>0.6</Flammability>
       <WorkToMake>700</WorkToMake>
 			<DeteriorationRate>2</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
     </statBases>
     <ingestible>
       <foodType>Meal</foodType>
       <preferability>MealSimple</preferability>
-      <nutrition>0.05</nutrition>
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
 			<optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
 		</ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>80</daysToRotStart>
+        <daysToRotStart>70</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Ingredients" />
@@ -38,11 +40,12 @@
     </comps>
   </ThingDef>
 
-  <RecipeDef ParentName="CookMealBase">
-    <defName>LotR_MakeCram</defName>
+  <RecipeDef>
+    <defName>LotR_Make_Cram</defName>
     <label>prepare cram</label>
     <description>Prepares cram, an indefinitely fresh biscuit formed from a combination of raw meat and raw plant ingredients. Much of the ingredients are wasted.</description>
     <jobString>Preparing cram.</jobString>
+    <workAmount>700</workAmount>
     <workSpeedStat>CookSpeed</workSpeedStat>
     <requiredGiverWorkType>Cooking</requiredGiverWorkType>
     <effectWorking>Cook</effectWorking>
@@ -68,27 +71,27 @@
       </li>
     </ingredients>
     <products>
-      <Pemmican>16</Pemmican>
+      <LotR_Cram>16</LotR_Cram>
     </products>
     <fixedIngredientFilter>
       <categories>
         <li>FoodRaw</li>
       </categories>
-      <exceptedCategories>
+      <disallowedCategories>
         <li>AnimalProductRaw</li>
-      </exceptedCategories>
-      <disallowedSpecialFilters>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
         <li>AllowPlantFood</li>
-      </disallowedSpecialFilters>
+      </specialFiltersToDisallow>
     </fixedIngredientFilter>
     <defaultIngredientFilter>
       <categories>
         <li>FoodRaw</li>
       </categories>
-      <exceptedThingDefs>
-        <li>Human_Meat</li>
-        <li>Megaspider_Meat</li>
-      </exceptedThingDefs>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+      </disallowedThingDefs>
     </defaultIngredientFilter>
     <workSkill>Cooking</workSkill>
   </RecipeDef>

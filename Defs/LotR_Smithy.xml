@@ -24,29 +24,30 @@
   <ThingDef ParentName="LotR_BenchBase">
     <defName>LotR_TableSmithy</defName>
     <label>blacksmith anvil and forge</label>
-    <thingClass>Building_WorkTable</thingClass>
     <description>The central hub of development for creating weapons and armor.</description>
+    <thingClass>Building_WorkTable</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/aPurpleAppleForge</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(7.0,7.0)</drawSize>
+      <shadowData>
+        <volume>(0.4, 0.8, 0.4)</volume>
+      </shadowData>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
         <cornerBL>Damage/Corner</cornerBL>
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
-	  <shadowData>
-		<volume>(0.4, 0.8, 0.4)</volume>
-	  </shadowData>
     </graphicData>
     <costList>
       <Steel>30</Steel>
     </costList>
-	<costStuffCount>100</costStuffCount>
-	<stuffCategories>
-	  <li>Stony</li>
-	</stuffCategories>
+  	<costStuffCount>100</costStuffCount>
+  	<stuffCategories>
+  	  <li>Stony</li>
+  	</stuffCategories>
+    <!-- <constructEffect>ConstructMetal</constructEffect> -->
     <altitudeLayer>Building</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
@@ -63,10 +64,16 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
-    <recipes></recipes>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+      <workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
+    </building>
     <comps>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>80.0</fuelConsumptionRate>
@@ -78,9 +85,8 @@
         </fuelFilter>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
       </li>
-      <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Glower">
-        <glowRadius>5</glowRadius>
+        <glowRadius>6</glowRadius>
         <glowColor>(73,123,138,0)</glowColor>
       </li>
       <li Class="CompProperties_AffectedByFacilities">
@@ -89,19 +95,13 @@
         </linkableFacilities>
       </li>
     </comps>
-    <building>
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <heatPerTickWhileWorking>0.30</heatPerTickWhileWorking>
-	  <workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
-	  <workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
-    </building>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
     <researchPrerequisites>
-	  <li>Smithing</li>
-	</researchPrerequisites>
+  	  <li>Smithing</li>
+  	</researchPrerequisites>
     <designationHotKey>Misc7</designationHotKey>
-	<placeWorkers>
-		<li>PlaceWorker_ShowFacilitiesConnections</li>
-	</placeWorkers>
     <castEdgeShadows>false</castEdgeShadows>
     <staticSunShadowHeight>0</staticSunShadowHeight>
   </ThingDef>

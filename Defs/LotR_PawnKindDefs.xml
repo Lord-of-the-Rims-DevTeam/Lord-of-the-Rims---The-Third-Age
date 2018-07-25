@@ -4,7 +4,6 @@
   <PawnKindDef Name="LotR_MedievalBase" Abstract="True">
     <defaultFactionType>LotRPlayerColony</defaultFactionType>
     <chemicalAddictionChance>0.0</chemicalAddictionChance>
-    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
     <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
     <backstoryCategory>Civil</backstoryCategory>
     <apparelTags>
@@ -22,16 +21,16 @@
       <min>0.2</min>
       <max>2.0</max>
     </gearHealthRange>
-	<apparelMoney>
-	  <min>300</min>
-	  <max>500</max>
-	</apparelMoney>
-	<apparelRequired>
+    <apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+	  <apparelMoney>
+	    <min>300</min>
+	    <max>500</max>
+	  </apparelMoney>
+	  <apparelRequired>
       <li>Apparel_BasicShirt</li>
       <li>Apparel_Pants</li>
     </apparelRequired>
-    <apparelAllowHeadwearChance>0.0</apparelAllowHeadwearChance>
-    <techHediffsChance>0.001</techHediffsChance>
+    <techHediffsChance>0</techHediffsChance>
     <invNutrition>0</invNutrition>
   </PawnKindDef>
 

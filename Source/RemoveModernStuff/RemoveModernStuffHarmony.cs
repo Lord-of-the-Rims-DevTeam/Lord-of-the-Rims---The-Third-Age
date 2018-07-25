@@ -16,10 +16,10 @@ namespace TheThirdAge
                 prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(IsTravelingInTransportPodWorldObject)), postfix: null);
 
 
-            foreach (Type type in typeof(ItemCollectionGenerator_Standard).AllSubclassesNonAbstract())
-                harmony.Patch(original: AccessTools.Method(type: type, name: "Generate", parameters: new []{typeof(ItemCollectionGeneratorParams)}), prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(ItemCollectionGeneratorGeneratePrefix)), postfix: null);
+            foreach (Type type in typeof(ThingSetMaker).AllSubclassesNonAbstract())
+                harmony.Patch(original: AccessTools.Method(type: type, name: "Generate", parameters: new []{typeof(ThingSetMakerParams)}), prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(ItemCollectionGeneratorGeneratePrefix)), postfix: null);
 
-            harmony.Patch(original: AccessTools.Method(type: AccessTools.TypeByName(name: "AgeInjuryUtility"), name: "RandomOldInjuryDamageType"),
+            harmony.Patch(original: AccessTools.Method(type: AccessTools.TypeByName(name: "AgeInjuryUtility"), name: "RandomPermanentInjuryDamageType"),
                 prefix: null, postfix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(RandomOldInjuryDamageTypePostfix)));
         }
 
@@ -29,7 +29,7 @@ namespace TheThirdAge
                 __result = DamageDefOf.Scratch;
         }
 
-        public static void ItemCollectionGeneratorGeneratePrefix(ref ItemCollectionGeneratorParams parms)
+        public static void ItemCollectionGeneratorGeneratePrefix(ref ThingSetMakerParams parms)
         {
             if (!parms.techLevel.HasValue || parms.techLevel > RemoveModernStuff.MAX_TECHLEVEL)
                 parms.techLevel = RemoveModernStuff.MAX_TECHLEVEL;

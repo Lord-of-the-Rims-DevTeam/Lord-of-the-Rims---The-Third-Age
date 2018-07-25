@@ -4,12 +4,7 @@
   <!--================== Bases ==================-->
   
   
-  <ThingDef Name="LotR_BuildingNaturalBase" Abstract="True">
-    <category>Building</category>
-    <selectable>true</selectable>
-    <drawerType>MapMeshOnly</drawerType>
-    <filthLeaving>RockRubble</filthLeaving>
-		<scatterableOnMapGen>false</scatterableOnMapGen>
+  <ThingDef ParentName="BuildingNaturalBase" Name="LotR_BuildingNaturalBase" Abstract="True">
 	</ThingDef>
 
 
@@ -49,47 +44,10 @@
   </ThingDef>
 
   
-  <ThingDef Name="LotR_ResourceBase" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <altitudeLayer>Item</altitudeLayer>
-    <stackLimit>75</stackLimit>
-		<statBases>
-			<Beauty>-4</Beauty>
-		</statBases>
-		<comps>
-			<li Class="CompProperties_Forbiddable"/>
-		</comps>
-		<alwaysHaulable>true</alwaysHaulable>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
+  <ThingDef ParentName="ResourceBase" Name="LotR_ResourceBase" Abstract="True">
 	</ThingDef>
 
-  <ThingDef Name="LotR_ChunkBase" Abstract="True">
-    <category>Item</category>
-    <thingClass>Thing</thingClass>
-    <altitudeLayer>Item</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.50</fillPercent>
-    <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Beauty>-8</Beauty>
-      <Cleanliness>-2</Cleanliness>
-    </statBases>
-    <selectable>true</selectable>
-    <pathCost>55</pathCost>
-    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
-    <drawerType>MapMeshOnly</drawerType>
-    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
-    <designateHaulable>true</designateHaulable>
-    <saveCompressible>true</saveCompressible>
-    <stackLimit>1</stackLimit>
-    <tradeability>Never</tradeability>
+  <ThingDef ParentName="ChunkBase" Name="LotR_ChunkBase" Abstract="True">
   </ThingDef>
   
 <!-- Iron -->
@@ -106,7 +64,12 @@
     <soundDrop>Metal_Drop</soundDrop>
     <statBases>
       <MarketValue>1.75</MarketValue>
-      <Mass>0.6</Mass>
+      <Mass>0.5</Mass>
+      <StuffPower_Armor_Sharp>0.78</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.39</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <SharpDamageMultiplier>0.87</SharpDamageMultiplier>
       <BluntDamageMultiplier>0.87</BluntDamageMultiplier>
     </statBases>
@@ -115,7 +78,6 @@
     <thingCategories>
       <li>ResourcesRaw</li>
     </thingCategories>
-    <deepCommonality>4</deepCommonality>
     <stuffProps>
       <categories>
         <li>Metallic</li>
@@ -123,19 +85,18 @@
       <commonality>1.00</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(108,102,105)</color>
-      <soundImpactStuff>BulletImpactMetal</soundImpactStuff>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <statFactors>
         <MaxHitPoints>1.1</MaxHitPoints>
         <Beauty>0.8</Beauty>
-        <Flammability>0.3</Flammability>
+        <Flammability>0.4</Flammability>
         <MeleeWeapon_CooldownMultiplier>1.05</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <smeltable>true</smeltable>
     </stuffProps>
   </ThingDef>
- 
 
   <ThingDef ParentName="LotR_ChunkBase">
     <defName>LotR_ChunkSlagIron</defName>
@@ -147,20 +108,21 @@
       <color>(116,65,62)</color>
     </graphicData>
     <statBases>
-      <Mass>7</Mass>
+      <Mass>5</Mass>
     </statBases>
     <soundDrop>ChunkSlag_Drop</soundDrop>
     <thingCategories>
       <li>Chunks</li>
     </thingCategories>
     <smeltProducts>
-      <LotR_Iron>10</LotR_Iron>
+      <LotR_Iron>20</LotR_Iron>
     </smeltProducts>
   </ThingDef>
   
   <ThingDef ParentName="LotR_RockBase">
     <defName>LotR_MineableIron</defName>
     <label>iron ore deposit</label>
+    <description>Naturally occurring ore deposits. Rich in iron.</description>
     <graphicData>
       <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -171,14 +133,13 @@
     <statBases>
       <MaxHitPoints>1500</MaxHitPoints>
     </statBases>
-    <description>Naturally occurring ore deposits. Rich in iron.</description>
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>LotR_Iron</mineableThing>
       <mineableYield>35</mineableYield>
       <mineableScatterCommonality>1</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>
-        <min>20</min>
+        <min>30</min>
         <max>40</max>
       </mineableScatterLumpSizeRange>
     </building>
@@ -211,7 +172,7 @@
 		<li>LotR_TableSmithy</li>
 	</recipeUsers>
     <products>
-      <Steel>10</Steel>
+      <Steel>20</Steel>
     </products>
     <fixedIngredientFilter>
       <thingDefs>
@@ -232,23 +193,27 @@
     <soundDrop>Silver_Drop</soundDrop>
     <useHitPoints>false</useHitPoints>
     <statBases>
-      <MarketValue>50</MarketValue>
-      <Mass>0.3</Mass>
-      <SharpDamageMultiplier>1.4</SharpDamageMultiplier>
-      <BluntDamageMultiplier>1.2</BluntDamageMultiplier>
+      <MarketValue>32</MarketValue>
+      <Mass>0.15</Mass>
+      <StuffPower_Armor_Sharp>1.51</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.76</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.3</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.3</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
     </thingCategories>
-    <deepCommonality>0</deepCommonality>
     <stuffProps>
       <categories>
         <li>Metallic</li>
       </categories>
-      <commonality>0.0</commonality>
+      <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(213,225,245)</color>
-      <soundImpactStuff>BulletImpactMetal</soundImpactStuff>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <statOffsets>
@@ -257,7 +222,7 @@
       <statFactors>
         <MaxHitPoints>2.8</MaxHitPoints>
         <Beauty>2</Beauty>
-        <Flammability>0.1</Flammability>
+        <Flammability>0.2</Flammability>
         <WorkToMake>2.2</WorkToMake>
 				<WorkToBuild>2.2</WorkToBuild>
         <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>

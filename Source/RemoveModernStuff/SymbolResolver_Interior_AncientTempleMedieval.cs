@@ -10,7 +10,7 @@ namespace TheThirdAge
     {
         public override void Resolve(ResolveParams rp)
         {
-            List<Thing> list = ItemCollectionGeneratorDefOf.AncientTempleContents.Worker.Generate(default(ItemCollectionGeneratorParams));
+            List<Thing> list = ThingSetMakerDefOf.MapGen_AncientTempleContents.root.Generate();
             for (int i = 0; i < list.Count; i++)
             {
                 ResolveParams resolveParams = rp;
@@ -34,7 +34,7 @@ namespace TheThirdAge
 //                {
 //                    ResolveParams resolveParams2 = rp;
 //                    int? mechanoidsCount = rp.mechanoidsCount;
-//                    resolveParams2.mechanoidsCount = new int?((mechanoidsCount == null)
+//                    resolveParams2.mechanoidsCount = new int?((mechanoidsCount.HasValue)
 //                        ? SymbolResolver_Interior_AncientTempleMedieval.MechanoidCountRange.RandomInRange
 //                        : mechanoidsCount.Value);
 //                    BaseGen.symbolStack.Push("randomMechanoidGroup", resolveParams2);

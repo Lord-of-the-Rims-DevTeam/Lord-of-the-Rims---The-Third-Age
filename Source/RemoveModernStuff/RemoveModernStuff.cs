@@ -71,7 +71,7 @@
                     typeof(IncidentWorker_ShipChunkDrop),
                     AccessTools.TypeByName(
                         name: "IncidentWorker_ShipPartCrash"),
-                    typeof(IncidentWorker_JourneyOffer),
+                    typeof(IncidentWorker_QuestJourneyOffer),
                     typeof(IncidentWorker_ResourcePodCrash),
                     typeof(IncidentWorker_RefugeePodCrash),
                     typeof(IncidentWorker_PsychicDrone),
@@ -113,10 +113,11 @@
 
             RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<ThingDef>), defs: things);
 
-            ItemCollectionGeneratorUtility.Reset();
+            ThingSetMakerUtility.Reset();
 
             RemoveStuffFromDatabase(databaseType: typeof(DefDatabase<TraitDef>),
-                defs: DefDatabase<TraitDef>.AllDefs.Where(predicate: td => new[] {nameof(TraitDefOf.Prosthophobe), "Prosthophile"}.Contains(value: td.defName)).Cast<Def>());
+            //                                                                   { nameof(TraitDefOf.Prosthophobe), "Prosthophile" } ?
+                defs: DefDatabase<TraitDef>.AllDefs.Where(predicate: td => new[] { nameof(TraitDefOf.BodyPurist), "Transhumanist" }.Contains(value: td.defName)).Cast<Def>());
 
             MethodInfo resolveDesignatorsAgain = typeof(DesignationCategoryDef).GetMethod(name: "ResolveDesignators", bindingAttr: BindingFlags.NonPublic | BindingFlags.Instance);
             foreach (DesignationCategoryDef dcd in DefDatabase<DesignationCategoryDef>.AllDefs)
@@ -129,7 +130,7 @@
                 defs: DefDatabase<FactionDef>.AllDefs.Where(predicate: fd => !fd.isPlayer && fd.techLevel > MAX_TECHLEVEL).Cast<Def>());
             
             foreach (MapGeneratorDef mgd in DefDatabase<MapGeneratorDef>.AllDefs)
-                mgd.GenSteps.RemoveAll(match: gs => gs.genStep is GenStep_SleepingMechanoids || gs.genStep is GenStep_Turrets || gs.genStep is GenStep_Power);
+                mgd.genSteps.RemoveAll(match: gs => gs.genStep is GenStep_SleepingMechanoids || gs.genStep is GenStep_Turrets || gs.genStep is GenStep_Power);
 
             foreach (RuleDef rd in DefDatabase<RuleDef>.AllDefs)
             {

@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using UnityEngine;
-using UnityEngine.AI;
 using Verse;
 
 namespace TheThirdAge
@@ -63,14 +62,14 @@ namespace TheThirdAge
                     {
                         sb.Append("CurrentlyRefrigerated".Translate(new object[]
                         {
-                            ticksUntilRotAtCurrentTemp.ToStringTicksToPeriodVagueMax()
+                            ticksUntilRotAtCurrentTemp.ToStringTicksToPeriodVague()
                         }) + ".");
                     }
                     else
                     {
                         sb.Append("NotRefrigerated".Translate(new object[]
                         {
-                            ticksUntilRotAtCurrentTemp.ToStringTicksToPeriodVagueMax()
+                            ticksUntilRotAtCurrentTemp.ToStringTicksToPeriodVague()
                         }) + ".");
                     }
                 }
@@ -114,7 +113,7 @@ namespace TheThirdAge
                 this.RotProgress += Mathf.Round(num * 250f);
                 if (this.Stage == RotStage.Rotting && this.PropsRot.rotDestroys)
                 {
-                    if (this.parent.Map.slotGroupManager.SlotGroupAt(this.parent.Position) != null)
+                    if (this.parent.Position.GetSlotGroup(this.parent.Map) != null)
                     {
                         Messages.Message("MessageRottedAwayInStorage".Translate(new object[]
                         {
@@ -129,11 +128,11 @@ namespace TheThirdAge
                 {
                     if (this.Stage == RotStage.Rotting && this.PropsRot.rotDamagePerDay > 0f)
                     {
-                        this.parent.TakeDamage(new DamageInfo(DamageDefOf.Rotting, GenMath.RoundRandom(this.PropsRot.rotDamagePerDay), -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
+                        this.parent.TakeDamage(new DamageInfo(DamageDefOf.Rotting, (float)GenMath.RoundRandom(this.PropsRot.rotDamagePerDay), 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
                     }
                     else if (this.Stage == RotStage.Dessicated && this.PropsRot.dessicatedDamagePerDay > 0f && this.ShouldTakeDessicateDamage())
                     {
-                        this.parent.TakeDamage(new DamageInfo(DamageDefOf.Rotting, GenMath.RoundRandom(this.PropsRot.dessicatedDamagePerDay), -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
+                        this.parent.TakeDamage(new DamageInfo(DamageDefOf.Rotting, (float)GenMath.RoundRandom(this.PropsRot.dessicatedDamagePerDay), 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
                     }
                 }
             }

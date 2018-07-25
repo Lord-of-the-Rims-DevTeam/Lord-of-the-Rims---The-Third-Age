@@ -81,6 +81,7 @@
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>MeleeWeapon_Knife</thingDef>
+          <stuff>LotR_Mithril</stuff>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>

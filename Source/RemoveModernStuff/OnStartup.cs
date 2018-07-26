@@ -182,7 +182,7 @@ namespace TheThirdAge
         {
             if (ThingDefOf.Steel?.stuffProps?.commonality >= 0.9f)
                 ThingDefOf.Steel.stuffProps.commonality = 0.2f;
-            if (ThingDefOf.Plasteel?.stuffProps?.commonality >= 0.19f)
+            if (ThingDefOf.Plasteel?.stuffProps?.commonality >= 0.04f)
                 ThingDefOf.Plasteel.stuffProps.commonality = 0.0f;
             if (ThingDefOf.Uranium?.stuffProps?.commonality >= 0.04f)
                 ThingDefOf.Uranium.stuffProps.commonality = 0.0f;

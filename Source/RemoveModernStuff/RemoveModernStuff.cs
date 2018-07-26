@@ -19,6 +19,8 @@
 
         static RemoveModernStuff()
         {
+            giveApproppriateTechLevelToIndustrialStuff();
+
             removedDefs = 0;
 
             IEnumerable<ResearchProjectDef> projects = DefDatabase<ResearchProjectDef>.AllDefs.Where(predicate: rpd => rpd.techLevel > MAX_TECHLEVEL);
@@ -143,6 +145,13 @@
 
             Log.Message(text: "Removed " + removedDefs + " modern defs");
 
+        }
+
+        private static void giveApproppriateTechLevelToIndustrialStuff()
+        {
+            ThingDef.Named("ElectricSmelter").techLevel = TechLevel.Industrial;
+            ThingDef.Named("ElectricCrematorium").techLevel = TechLevel.Industrial;
+            ThingDef.Named("FueledSmithy").techLevel = TechLevel.Industrial;
         }
 
         private static void RemoveStuffFromDatabase(Type databaseType, [NotNull] IEnumerable<Def> defs)

@@ -52,10 +52,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_RottableFixer.cs" />
+    <Compile Include="CompFireOverlayRotatable.cs" />
     <Compile Include="CompMedievalRottable.cs" />
+    <Compile Include="CompProperties_FireOverlayRotatable.cs" />
     <Compile Include="GenStep_ScatterShrinesMedieval.cs" />
+    <Compile Include="GraphicRotatable.cs" />
     <Compile Include="ModStuff.cs" />
     <Compile Include="OnStartup.cs" />
+    <Compile Include="PlaceWorker_CeilingBuilding.cs" />
+    <Compile Include="PlaceWorker_WallBuilding.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveModernStuff.cs" />
     <Compile Include="SymbolResolver_AncientShrinesGroupMedieval.cs" />

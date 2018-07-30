@@ -9,10 +9,10 @@ namespace TheThirdAge {
         Multi
     }
 
-    public class _Graphic : Graphic_Collection {
+    public class GraphicRotatable : Graphic_Collection {
         AutoRotate autoRotate;
 
-        public _Graphic(GraphicRequest req, AutoRotate autoRotate = AutoRotate.None) {
+        public GraphicRotatable(GraphicRequest req, AutoRotate autoRotate = AutoRotate.None) {
             base.Init(req);
 
             if (autoRotate != AutoRotate.None) {

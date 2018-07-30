@@ -7,8 +7,14 @@ namespace RimWorld {
 
     [StaticConstructorOnStartup]
     public class CompFireOverlayRotatable : ThingComp {
-
-        private _Graphic FireGraphic = null;
+        // This need to be readonly, otherwise the game will complain about the thread it's being loaded.
+        private static readonly GraphicRotatable FireGraphic = new GraphicRotatable(new GraphicRequest(null,
+                                                        "Things/Special/Fire",
+                                                        ShaderDatabase.TransparentPostLight,
+                                                        Vector2.one,
+                                                        Color.white,
+                                                        Color.white,
+                                                        null, 0));
 
         public CompProperties_FireOverlayRotatable Props =>
             (CompProperties_FireOverlayRotatable)this.props;
@@ -28,9 +34,9 @@ namespace RimWorld {
                 def = thing.def;
 
             scramble = UnityEngine.Random.Range(0, 24735);
-            LoadGraphics();
+            //LoadGraphics();
         }
-
+/*
         public void LoadGraphics() {
             try {
                 GraphicRequest gr = new GraphicRequest(null,
@@ -40,13 +46,13 @@ namespace RimWorld {
                                                         Color.white,
                                                         Color.white,
                                                         null, 0);
-                FireGraphic = new _Graphic(gr);
+                FireGraphic = new GraphicRotatable(gr);
             }
             catch (Exception e) {
-                UnityEngine.Debug.Log($"TTA: CompFire caught exception {e}.");
+                Log.Message($"TTA: CompFire caught exception {e}.");
             }
         }
-
+*/
         public override void PostDraw() {
             try {
                 if (this.parent == null) {
@@ -88,7 +94,7 @@ namespace RimWorld {
                 FireFlicker(drawPosRotated, drawSizeRotated, quaternion);
             }
             catch (Exception e) {
-                UnityEngine.Debug.Log($"TTA: CompFire caught exception {e}.");
+                Log.Message($"TTA: CompFire caught exception {e}.");
             }
         }
 

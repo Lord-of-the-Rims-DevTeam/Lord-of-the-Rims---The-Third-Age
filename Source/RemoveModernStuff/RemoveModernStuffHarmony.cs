@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using Harmony;
 using RimWorld;
 using Verse;
@@ -19,14 +22,40 @@ namespace TheThirdAge
             foreach (Type type in typeof(ThingSetMaker).AllSubclassesNonAbstract())
                 harmony.Patch(original: AccessTools.Method(type: type, name: "Generate", parameters: new []{typeof(ThingSetMakerParams)}), prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(ItemCollectionGeneratorGeneratePrefix)), postfix: null);
 
-            harmony.Patch(original: AccessTools.Method(type: AccessTools.TypeByName(name: "AgeInjuryUtility"), name: "RandomPermanentInjuryDamageType"),
-                prefix: null, postfix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(RandomOldInjuryDamageTypePostfix)));
+            IEnumerable<MethodInfo> mis = AgeInjuryUtilityNamesHandler();
+            if (mis.Any())
+            {
+                Log.Message("..." + mis.Count() + " AgeInjuryUtility types found. Attempting address to harmony...");
+                foreach (MethodInfo mi in mis)
+                {
+                    harmony.Patch(original: mi,
+                                  prefix: null, 
+                                  postfix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), 
+                                                             name: nameof(RandomPermanentInjuryDamageTypePostfix)));
+                }
+            } else
+            {
+                Log.Message("No AgeInjuryUtility found.");
+            }
+
         }
 
-        public static void RandomOldInjuryDamageTypePostfix(ref DamageDef __result)
+        public static IEnumerable<MethodInfo> AgeInjuryUtilityNamesHandler()
         {
-            if (__result == DamageDefOf.Bullet)
+            //Log.Message("Looking for AgeInjuryUtility...");
+            return (from assembly in AppDomain.CurrentDomain.GetAssemblies()
+                                    from type in assembly.GetTypes()
+                                    from method in type.GetMethods(BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.FlattenHierarchy)
+                                    where method.Name == "RandomPermanentInjuryDamageType"
+                                    select method);
+        }
+
+        public static void RandomPermanentInjuryDamageTypePostfix(ref DamageDef __result)
+        {
+            if (__result == DamageDefOf.Bullet) {
                 __result = DamageDefOf.Scratch;
+                //Log.Message("Hello from RandomOldInjuryDamageTypePostfix.\nI heard you don't like Gunshot, so I fixed it.");
+            }
         }
 
         public static void ItemCollectionGeneratorGeneratePrefix(ref ThingSetMakerParams parms)

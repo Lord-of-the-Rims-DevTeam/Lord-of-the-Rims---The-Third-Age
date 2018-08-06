@@ -141,14 +141,14 @@ namespace TheThirdAge
         private void HandleMeatThatNeedsSalting(ThingWithComps meat)
         {
             var count = meat.stackCount;
-            var curHP = meat.HitPoints;
+            float curHP = meat.HitPoints;
             var curDefName = meat.def.defName;
             var curPosition = meat.PositionHeld;
             var curMap = meat.MapHeld;
             this.parent.Destroy(DestroyMode.Vanish);
             var newThing = (ThingWithComps) ThingMaker.MakeThing(ThingDef.Named(curDefName + "Salted"));
             newThing.stackCount = count;
-            newThing.HitPoints = curHP;
+            newThing.HitPoints = Mathf.RoundToInt(curHP / meat.GetStatValue(StatDefOf.MaxHitPoints) * newThing.MaxHitPoints); // curHP;
             GenPlace.TryPlaceThing(newThing, curPosition, curMap, ThingPlaceMode.Direct);
         }
 

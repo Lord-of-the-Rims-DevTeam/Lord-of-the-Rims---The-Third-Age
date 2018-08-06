@@ -8,10 +8,15 @@ namespace RimWorld
     [StaticConstructorOnStartup]
     public class CompFireOverlayRotatable : ThingComp
     {
+        protected CompRefuelable refuelableComp;
+        // This need to be readonly, otherwise the game will complain about the thread it's being loaded.
+        private static readonly GraphicRotatable FireGraphic = new GraphicRotatable(new GraphicRequest(null,
+                                                        "Things/Special/Fire",
+                                                        ShaderDatabase.TransparentPostLight,
+                                                        Vector2.one, Color.white, Color.white,
+                                                        null, 0, null));
 
-        private _Graphic FireGraphic = null;
-
-        public CompProperties_FireOverlayRotatable Props => 
+        public CompProperties_FireOverlayRotatable Props =>
             (CompProperties_FireOverlayRotatable)this.props;
 
         ThingWithComps thing = null;
@@ -29,10 +34,17 @@ namespace RimWorld
             if (thing != null)
                 def = thing.def;
 
-            scramble = UnityEngine.Random.Range(0, 24735);
-            LoadGraphics();
+            
+            //LoadGraphics();
         }
 
+        void Awake()
+        {
+
+        }
+
+
+/*
         public void LoadGraphics()
         {
             try
@@ -43,14 +55,14 @@ namespace RimWorld
                     Vector2.one, 
                     Color.white, 
                     Color.white, null, 0, null);
-                FireGraphic = new _Graphic(gr);
+                FireGraphic = new GraphicRotatable(gr);
             }
             catch (Exception e)
             {
-                UnityEngine.Debug.Log($"TTA: CompFire caught exception {e}.");
+                Log.Message($"TTA: CompFire caught exception {e}.");
             }
         }
-
+*/
         public override void PostDraw()
         {
             try
@@ -98,12 +110,14 @@ namespace RimWorld
             }
             catch (Exception e)
             {
-                UnityEngine.Debug.Log($"TTA: CompFire caught exception {e}.");
+                Log.Message($"TTA: CompFire caught exception {e}.");
             }
         }
 
         private void FireFlicker(Vector3 drawPosRotated, Vector3 drawSizeRotated, Quaternion quaternion)
         {
+            if (scramble == 0)
+                scramble = UnityEngine.Random.Range(0, 24735);
             int timeTicks = Find.TickManager.TicksGame;
             int timeTicksScrambled = timeTicks + scramble;
             int interval = timeTicksScrambled / Props.ticks;
@@ -134,13 +148,22 @@ namespace RimWorld
 
             if (Props.dependency == DependencyType.Fuel)
             {
-                CompRefuelable fuel = (CompRefuelable)thing.GetComp<CompRefuelable>();
-                if (fuel == null)
+                if (refuelableComp == null)
                     return false;
                 else
-                    return fuel.HasFuel;
+                    return refuelableComp.HasFuel;
             }
             else return false;
+        }
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            this.refuelableComp = this.parent.GetComp<CompRefuelable>();
+        }
+
+        static CompFireOverlayRotatable()
+        {
         }
     }
 }

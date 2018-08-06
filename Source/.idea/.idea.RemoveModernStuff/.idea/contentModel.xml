@@ -6,11 +6,16 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="RemoveModernStuff" t="IncludeRecursive">
         <e p="Building_RottableFixer.cs" t="Include" />
+        <e p="CompFireOverlayRotatable.cs" t="Include" />
         <e p="CompMedievalRottable.cs" t="Include" />
+        <e p="CompProperties_FireOverlayRotatable.cs" t="Include" />
         <e p="GenStep_ScatterShrinesMedieval.cs" t="Include" />
+        <e p="GraphicRotatable.cs" t="Include" />
         <e p="ModStuff.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="OnStartup.cs" t="Include" />
+        <e p="PlaceWorker_CeilingBuilding.cs" t="Include" />
+        <e p="PlaceWorker_WallBuilding.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>

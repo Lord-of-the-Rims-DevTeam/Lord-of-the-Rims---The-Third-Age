@@ -75,7 +75,7 @@
                         name: "IncidentWorker_ShipPartCrash"),
                     typeof(IncidentWorker_QuestJourneyOffer),
                     typeof(IncidentWorker_ResourcePodCrash),
-                    typeof(IncidentWorker_RefugeePodCrash),
+                    //typeof(IncidentWorker_RefugeePodCrash),
                     typeof(IncidentWorker_PsychicDrone),
                     typeof(IncidentWorker_RansomDemand),
                     typeof(IncidentWorker_ShortCircuit),

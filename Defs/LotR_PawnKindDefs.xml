@@ -5,7 +5,7 @@
     <defaultFactionType>LotRPlayerColony</defaultFactionType>
     <chemicalAddictionChance>0.0</chemicalAddictionChance>
     <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
-    <backstoryCategory>Civil</backstoryCategory>
+    <backstoryCategories><li>Civil</li></backstoryCategories>
     <apparelTags>
       <li>Tribal</li>
     </apparelTags>

@@ -11,7 +11,6 @@
     <pawnSingular>villager</pawnSingular>
     <pawnsPlural>villagers</pawnsPlural>
     <techLevel>Medieval</techLevel>
-    <backstoryCategories><li>Civil</li></backstoryCategories>
     <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
     <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>

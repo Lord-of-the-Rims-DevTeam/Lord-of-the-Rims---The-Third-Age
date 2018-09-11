@@ -18,7 +18,6 @@
               <caret line="122" column="18" lean-forward="false" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
               <folding>
                 <marker date="1533523449645" expanded="false" signature="6:124" ph="..." />
-                <marker date="1533523449645" expanded="true" signature="147:10348" ph="{...}" />
                 <marker date="1533523449645" expanded="true" signature="216:10346" ph="{...}" />
                 <marker date="1533523449645" expanded="true" signature="325:550" ph="{...}" />
                 <marker date="1533523449645" expanded="true" signature="593:843" ph="{...}" />
@@ -62,8 +61,8 @@
       <file leaf-file-name="RemoveModernStuff.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="65" column="59" lean-forward="true" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+            <state relative-caret-position="526">
+              <caret line="67" column="52" lean-forward="false" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
               <folding>
                 <marker date="1534320115958" expanded="false" signature="6:37" ph="..." />
                 <marker date="1534320115958" expanded="true" signature="60:16179" ph="{...}" />
@@ -95,7 +94,7 @@
       <file leaf-file-name="ThingDef.cs" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1426B82F-971B-4E90-BB79-8EAC70FA436E/20/e3600113/ThingDef.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="912">
               <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
               <folding />
             </state>
@@ -244,7 +243,7 @@
     </replaceStrings>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1426B82F-971B-4E90-BB79-8EAC70FA436E/20/e3600113/ThingDef.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1426B82F-971B-4E90-BB79-8EAC70FA436E/20/e3600113/ThingDef.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/765250CD-2B53-4903-8F57-1EFC3734D8FA/67/d2023d29/Building_Storage.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/RemoveModernStuff/Building_RottableFixer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs" root0="FORCE_HIGHLIGHTING" />
@@ -304,6 +303,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -311,31 +311,12 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="RemoveModernStuff (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="RemoveModernStuff (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="RemoveModernStuff" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="RemoveModernStuff (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="RemoveModernStuff" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="References" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="RemoveModernStuff (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="RemoveModernStuff" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="References" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assemblies" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,12 +376,14 @@
       <workItem from="1528567787268" duration="1865000" />
       <workItem from="1533521460631" duration="1502000" />
       <workItem from="1534310400137" duration="9152000" />
-      <workItem from="1535030660292" duration="64000" />
+      <workItem from="1535030660292" duration="1315000" />
+      <workItem from="1535808868394" duration="1302000" />
+      <workItem from="1536598644044" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63577000" />
+    <option name="totallyTimeSpent" value="66728000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,11 +402,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6967341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6967341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3335684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34626234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -435,6 +417,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -456,7 +439,6 @@
           <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
           <folding>
             <marker date="1533523449645" expanded="false" signature="6:124" ph="..." />
-            <marker date="1533523449645" expanded="true" signature="147:10348" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="216:10346" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="325:550" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="593:843" ph="{...}" />
@@ -615,7 +597,6 @@
           <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
           <folding>
             <marker date="1533523449645" expanded="false" signature="6:124" ph="..." />
-            <marker date="1533523449645" expanded="true" signature="147:10348" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="216:10346" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="325:550" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="593:843" ph="{...}" />
@@ -774,7 +755,6 @@
           <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
           <folding>
             <marker date="1533523449645" expanded="false" signature="6:124" ph="..." />
-            <marker date="1533523449645" expanded="true" signature="147:10348" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="216:10346" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="325:550" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="593:843" ph="{...}" />
@@ -933,7 +913,6 @@
           <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
           <folding>
             <marker date="1533523449645" expanded="false" signature="6:124" ph="..." />
-            <marker date="1533523449645" expanded="true" signature="147:10348" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="216:10346" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="325:550" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="593:843" ph="{...}" />
@@ -1092,7 +1071,6 @@
           <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
           <folding>
             <marker date="1533523449645" expanded="false" signature="6:124" ph="..." />
-            <marker date="1533523449645" expanded="true" signature="147:10348" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="216:10346" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="325:550" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="593:843" ph="{...}" />
@@ -1292,7 +1270,6 @@
           <caret line="122" column="18" lean-forward="false" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
           <folding>
             <marker date="1533523449645" expanded="false" signature="6:124" ph="..." />
-            <marker date="1533523449645" expanded="true" signature="147:10348" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="216:10346" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="325:550" ph="{...}" />
             <marker date="1533523449645" expanded="true" signature="593:843" ph="{...}" />
@@ -1408,7 +1385,7 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1426B82F-971B-4E90-BB79-8EAC70FA436E/20/e3600113/ThingDef.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="912">
           <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
           <folding />
         </state>
@@ -1416,8 +1393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RemoveModernStuff/RemoveModernStuff.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="65" column="59" lean-forward="true" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+        <state relative-caret-position="526">
+          <caret line="67" column="52" lean-forward="false" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
           <folding>
             <marker date="1534320115958" expanded="false" signature="6:37" ph="..." />
             <marker date="1534320115958" expanded="true" signature="60:16179" ph="{...}" />

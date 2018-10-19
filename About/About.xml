@@ -1,14 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Lord of the Rims - The Third Age</name>
   <author>erdelf and Jecrell</author>
-  <targetVersion>0.19.0</targetVersion>
-  <description>
-    v0.8.6 Public Test Version
+  <targetVersion>1.0.2059</targetVersion>
+  <description>0.20.0.0 (10-19-2018)
+
     Removes modern items.
 	Adds a blacksmith forge to forge steel.
 	Adds iron and mithril.
 	
 	To do: Add a certain ring. Fix various bugs.
-  </description>
+
+Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
+
+These are the most excellent rim dwellers who support me: 
+Lumberjack, Shibby Says, TheJagermeister, Cory Bonifay, Kiya Nicoll, Matt Harris, Paul Fenwick, Grendalloffen, Martin K. Bonde, Bentley Alsup, Eric Idema, MasterScootie, GoSu, Josh McCabe, spook, Clifford Campbell, J, CrankyPeanut, E_T, Finwej, Jonathan, Audrin Navarro, Михаил Юрченко, John Kanady, Luis Figueroa, Midgeman, Nate Haug, Nemuri Hime, Richard Paul, SilentWeirdo, Calum, Calhoun Cattell, Keith Thoma, Tim Stillson, Dick Jones, Patrick, Nathan Getman, Populous25, Sharp Spook, Steven James, Marcus Sireanu, Mark, Emily Shaw, Drachken, Zalson, Baron Xot, Nicholas Bateman, Christopher, Justin Andres, Luis Salvatierra, TinyFloatingTurtle, George Chong Chuang Ming, John Boehr, Oliver White, roxxploxx, Robin Hager, Brachiaraidos, That Guy, Toc Anastar, Karol Rybak, Allic, Austin Harbert, Yewty, Evan Hwang, Ryan Brock, Jonathan Holzinger, MC, Alexander, Kevin Reagan, Alex Mederer, Toss Antilles, Chelsea Archambeau, Aron Glasser, Dan Winn, Fredric Sundberg, Sarah Banks, ted stevens
+
+========================
+Changelog
+========================
+0.20.0.0 (10-19-2018)
+========================
+Prepared for RimWorld 1.0 release.
+
+</description>
 </ModMetaData>

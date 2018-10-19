@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Harmony;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace TheThirdAge
@@ -11,12 +12,27 @@ namespace TheThirdAge
     [StaticConstructorOnStartup]
     public static class RemoveModernStuffHarmony
     {
+        private const int START_DATE = 3001;
+
         static RemoveModernStuffHarmony()
         {
             HarmonyInstance harmony = HarmonyInstance.Create(id: "rimworld.removemodernstuff");
 
             harmony.Patch(original: AccessTools.Method(type: typeof(PawnUtility), name: "IsTravelingInTransportPodWorldObject"),
                 prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(IsTravelingInTransportPodWorldObject)), postfix: null);
+
+            
+            //Changes the starting date of RimWorld.
+            harmony.Patch(AccessTools.Property(typeof(TickManager), "StartingYear").GetGetMethod(), null,
+                new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(StartingYear_PostFix)), null);
+            harmony.Patch(AccessTools.Method(typeof(GenDate), "Year"), null,
+                new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(Year_PostFix)), null);
+
+            //Replaces date string to include 'The Third Age'
+            harmony.Patch(AccessTools.Method(typeof(GenDate), "DateFullStringAt"), null,
+                new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(DateFullStringAt_PostFix)), null);
+            harmony.Patch(AccessTools.Method(typeof(GenDate), "DateReadoutStringAt"), null,
+                new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(DateReadoutStringAt_PostFix)), null);
 
 
             foreach (Type type in typeof(ThingSetMaker).AllSubclassesNonAbstract())
@@ -38,6 +54,37 @@ namespace TheThirdAge
                 Log.Message("No AgeInjuryUtility found.");
             }
 
+        }
+
+        //TickManager
+        public static void StartingYear_PostFix(ref int __result)
+        {
+            __result = START_DATE; //The year Bilbo left the shire.
+        }
+
+
+        //GenDate
+        public static void Year_PostFix(long absTicks, float longitude, ref int __result)
+        {
+            long num = absTicks + ((long)GenDate.TimeZoneAt(longitude) * 2500L);
+            __result = START_DATE + Mathf.FloorToInt((float)num / 3600000f);
+        }
+
+
+        //GenDate
+        public static void DateFullStringAt_PostFix(long absTicks, Vector2 location, ref string __result)
+        {
+            int num = GenDate.DayOfSeason(absTicks, location.x) + 1;
+            string value = Find.ActiveLanguageWorker.OrdinalNumber(num, Gender.None);
+            __result = "TTA_FullDate".Translate(value, GenDate.Quadrum(absTicks, location.x).Label(), GenDate.Year(absTicks, location.x), num);
+        }
+
+        //GenDate
+        public static void DateReadoutStringAt_PostFix(long absTicks, Vector2 location, ref string __result)
+        {
+            int num = GenDate.DayOfSeason(absTicks, location.x) + 1;
+            string value = Find.ActiveLanguageWorker.OrdinalNumber(num, Gender.None);
+            __result = "TTA_DateReadout".Translate(value, GenDate.Quadrum(absTicks, location.x).Label(), GenDate.Year(absTicks, location.x), num);
         }
 
         public static IEnumerable<MethodInfo> AgeInjuryUtilityNamesHandler()

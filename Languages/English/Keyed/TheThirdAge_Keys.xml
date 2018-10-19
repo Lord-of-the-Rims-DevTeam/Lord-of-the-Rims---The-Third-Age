@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+<TTA_Title>The Third Age</TTA_Title>
+<TTA_FullDate>{0} of {1}, {2}, Third Age</TTA_FullDate>
+<TTA_DateReadout>{0} of {1}, {2}, Third Age</TTA_DateReadout>
 <TTA_SaltedLabel>Salted {0}</TTA_SaltedLabel>
 
 </LanguageData>

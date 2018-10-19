@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony, Version=1.0.9.1, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Lord-of-the-Rims---Men-and-Beasts\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\JecsTools\Assemblies\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>

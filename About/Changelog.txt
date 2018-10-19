@@ -1,3 +1,7 @@
+0.20.0.1 (10-20-2018)
+========================
+Added Fluffys Mod Manager support by adding the Manifest.xml file.
+
 0.20.0.0 (10-19-2018)
 ========================
 Prepared for RimWorld 1.0 release.

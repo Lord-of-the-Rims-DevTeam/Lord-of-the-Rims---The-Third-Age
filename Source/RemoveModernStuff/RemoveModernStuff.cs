@@ -123,60 +123,75 @@ namespace TheThirdAge
                 }
             }
 
+
             DebugString.AppendLine("IncidentDef Removal List");
-            RemoveStuffFromDatabase(typeof(DefDatabase<IncidentDef>),
-                DefDatabase<IncidentDef>.AllDefs
-                    .Where(id => new[]
-                                     {
-                                         typeof
-                                         (IncidentWorker_ShipChunkDrop
-                                         ),
-                                         AccessTools
-                                             .TypeByName(
-                                                 "IncidentWorker_ShipPartCrash"),
-                                         typeof
-                                         (IncidentWorker_QuestJourneyOffer
-                                         ),
-                                         typeof
-                                         (IncidentWorker_ResourcePodCrash
-                                         ),
-                                         //typeof(IncidentWorker_RefugeePodCrash),
-                                         typeof(IncidentWorker_TransportPodCrash),
-                                         typeof
-                                         (IncidentWorker_PsychicDrone
-                                         ),
-                                         typeof
-                                         (IncidentWorker_RansomDemand
-                                         ),
-                                         typeof
-                                         (IncidentWorker_ShortCircuit
-                                         ),
-                                         typeof
-                                         (IncidentWorker_OrbitalTraderArrival
-                                         ),
-                                         typeof
-                                         (IncidentWorker_PsychicSoothe
-                                         )
-                                     }.SelectMany(
-                                         it =>
-                                             it
-                                                 .AllSubclassesNonAbstract()
-                                                 .Concat(
-                                                     it))
-                                     .ToArray()
-                                     .Contains(
-                                         id
-                                             .workerClass) ||
-                                 new[]
-                                 {
-                                     "Disease_FibrousMechanites",
-                                     "Disease_SensoryMechanites",
-                                     "RaidEnemyEscapeShip",
-                                     "StrangerInBlackJoin"
-                                 }.Contains(
-                                     id
-                                         .defName))
-                    .Cast<Def>());
+
+
+
+            IEnumerable<IncidentDef> incidents = DefDatabase<IncidentDef>.AllDefs
+               .Where(id => new[]
+                                {
+                                    typeof
+                                    (IncidentWorker_ShipChunkDrop
+                                    ),
+                                    AccessTools
+                                       .TypeByName(
+                                            "IncidentWorker_ShipPartCrash"),
+                                    typeof
+                                    (IncidentWorker_QuestJourneyOffer
+                                    ),
+                                    typeof
+                                    (IncidentWorker_ResourcePodCrash
+                                    ),
+                                    //typeof(IncidentWorker_RefugeePodCrash),
+                                    typeof(IncidentWorker_TransportPodCrash),
+                                    typeof
+                                    (IncidentWorker_PsychicDrone
+                                    ),
+                                    typeof
+                                    (IncidentWorker_RansomDemand
+                                    ),
+                                    typeof
+                                    (IncidentWorker_ShortCircuit
+                                    ),
+                                    typeof
+                                    (IncidentWorker_OrbitalTraderArrival
+                                    ),
+                                    typeof
+                                    (IncidentWorker_PsychicSoothe
+                                    )
+                                }.SelectMany(
+                                    it =>
+                                        it
+                                           .AllSubclassesNonAbstract()
+                                           .Concat(
+                                                it))
+                               .ToArray()
+                               .Contains(
+                                    id
+                                       .workerClass) ||
+                            new[]
+                            {
+                                "Disease_FibrousMechanites",
+                                "Disease_SensoryMechanites",
+                                "RaidEnemyEscapeShip",
+                                "StrangerInBlackJoin"
+                            }.Contains(
+                                id
+                                   .defName)).ToList();
+
+
+            foreach (IncidentDef incident in incidents)
+            {
+                incident.targetTags?.Clear();
+                incident.baseChance = 0f;
+                incident.allowedBiomes?.Clear();
+                incident.earliestDay = int.MaxValue;
+            }
+
+            RemoveStuffFromDatabase(typeof(DefDatabase<IncidentDef>), incidents.Cast<Def>());
+
+            
 
 
             DebugString.AppendLine("Replaced Ancient Asphalt Road / Ancient Asphalt Highway with Stone Road");

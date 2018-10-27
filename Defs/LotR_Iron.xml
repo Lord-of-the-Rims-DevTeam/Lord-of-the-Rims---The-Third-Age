@@ -223,7 +223,7 @@
         <MaxHitPoints>2.8</MaxHitPoints>
         <Beauty>2</Beauty>
         <Flammability>0.2</Flammability>
-        <WorkToMake>2.2</WorkToMake>
+        <WorkToMake>1.2</WorkToMake>
 				<WorkToBuild>2.2</WorkToBuild>
         <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
       </statFactors>

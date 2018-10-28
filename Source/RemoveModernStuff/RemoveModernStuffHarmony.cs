@@ -34,6 +34,8 @@ namespace TheThirdAge
             harmony.Patch(AccessTools.Method(typeof(GenDate), "DateReadoutStringAt"), null,
                 new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(DateReadoutStringAt_PostFix)), null);
 
+            harmony.Patch(AccessTools.Method(typeof(HealthUtility), nameof(HealthUtility.RandomViolenceDamageType)), null, new HarmonyMethod(type: typeof(RemoveModernStuffHarmony),
+                name: nameof(RandomPermanentInjuryDamageTypePostfix)));
 
             foreach (Type type in typeof(ThingSetMaker).AllSubclassesNonAbstract())
                 harmony.Patch(original: AccessTools.Method(type: type, name: "Generate", parameters: new []{typeof(ThingSetMakerParams)}), prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(ItemCollectionGeneratorGeneratePrefix)), postfix: null);

@@ -21,6 +21,9 @@ namespace TheThirdAge
         private static int removedDefs;
         private static StringBuilder DebugString = new StringBuilder();
 
+        public static IEnumerable<HediffDef> hediffs;
+        public static IEnumerable<ThingDef> things;
+
         static RemoveModernStuff()
         {
             DebugString.AppendLine("Lord of the Rings - The Third Age - Start Removal Log");
@@ -32,7 +35,7 @@ namespace TheThirdAge
             IEnumerable<ResearchProjectDef> projects =
                 DefDatabase<ResearchProjectDef>.AllDefs.Where(rpd => rpd.techLevel > MAX_TECHLEVEL);
 
-            ThingDef[] things = DefDatabase<ThingDef>.AllDefs.Where(td =>
+            things = DefDatabase<ThingDef>.AllDefs.Where(td =>
                 td.techLevel > MAX_TECHLEVEL ||
                 (td.researchPrerequisites?.Any(rpd => projects.Contains(rpd)) ?? false) || new[]
                 {
@@ -220,7 +223,7 @@ namespace TheThirdAge
             //                type.GetMethod(name: "Reset")?.Invoke(obj: null, parameters: null);
 
             DebugString.AppendLine("ThingDef Removal List");
-            RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), things);
+            RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), (ThingDef[]) things);
 
             DebugString.AppendLine("ThingSetMaker Reset");
             ThingSetMakerUtility.Reset();

@@ -56,6 +56,19 @@ namespace TheThirdAge
                 Log.Message("No AgeInjuryUtility found.");
             }
 
+            harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new []{typeof(PawnGenerationRequest)}), null, new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostGenerateCleanup)));
+            harmony.Patch(AccessTools.Method(typeof(TradeDeal), "AddToTradeables"), new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostCacheTradeables)), null);
+
+        }
+
+        public static bool PostCacheTradeables(Thing t)
+        {
+            return RemoveModernStuff.things.Contains(t.def);
+        }
+
+        public static void PostGenerateCleanup(Pawn __result)
+        {
+            __result.health.hediffSet.hediffs.RemoveAll(hed => RemoveModernStuff.hediffs.Contains(hed.def));
         }
 
         //TickManager

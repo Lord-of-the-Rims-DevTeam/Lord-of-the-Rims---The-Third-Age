@@ -280,6 +280,10 @@ namespace TheThirdAge
             }
 
             Log.Message("Removed " + removedDefs + " modern defs");
+
+            PawnWeaponGenerator.Reset();
+            PawnApparelGenerator.Reset();
+
             Debug.Log(DebugString.ToString());
             DebugString = new StringBuilder();
         }

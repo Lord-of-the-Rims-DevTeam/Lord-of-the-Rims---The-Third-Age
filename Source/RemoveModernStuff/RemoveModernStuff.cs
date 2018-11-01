@@ -210,7 +210,7 @@ namespace TheThirdAge
             }
 
             DebugString.AppendLine("Special Hediff Removal List");
-            RemoveStuffFromDatabase(typeof(DefDatabase<HediffDef>), new[] {HediffDefOf.Gunshot});
+            RemoveStuffFromDatabase(typeof(DefDatabase<HediffDef>), (hediffs = new[] {HediffDefOf.Gunshot}).Cast<Def>());
 
             DebugString.AppendLine("RaidStrategyDef Removal List");
             RemoveStuffFromDatabase(typeof(DefDatabase<RaidStrategyDef>),

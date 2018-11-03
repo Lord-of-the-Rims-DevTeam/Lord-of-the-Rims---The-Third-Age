@@ -51,7 +51,7 @@ namespace TheThirdAge
             recipeDefsToRemove?.RemoveAll(x =>
                 x.defName == "ExtractMetalFromSlag" ||
                 x.defName == "SmeltWeapon" ||
-                x.defName == "DestroyWeapon" || 
+                x.defName == "DestroyWeapon" ||
                 x.defName == "OfferingOfPlants_Meagre" ||
                 x.defName == "OfferingOfPlants_Decent" ||
                 x.defName == "OfferingOfPlants_Sizable" ||
@@ -80,13 +80,13 @@ namespace TheThirdAge
             FieldInfo getThingInfo =
                 typeof(ScenPart_ThingCount).GetField("thingDef", BindingFlags.NonPublic | BindingFlags.Instance);
             foreach (ScenarioDef def in DefDatabase<ScenarioDef>.AllDefs)
-            foreach (ScenPart sp in def.scenario.AllParts)
-                if (sp is ScenPart_ThingCount && things.Contains((ThingDef) getThingInfo?.GetValue(sp)))
-                {
-                    def.scenario.RemovePart(sp);
-                    DebugString.AppendLine("- " + sp.Label + " " + ((ThingDef) getThingInfo?.GetValue(sp)).label +
-                                           " from " + def.label);
-                }
+                foreach (ScenPart sp in def.scenario.AllParts)
+                    if (sp is ScenPart_ThingCount && things.Contains((ThingDef)getThingInfo?.GetValue(sp)))
+                    {
+                        def.scenario.RemovePart(sp);
+                        DebugString.AppendLine("- " + sp.Label + " " + ((ThingDef)getThingInfo?.GetValue(sp)).label +
+                                               " from " + def.label);
+                    }
 
             foreach (ThingCategoryDef thingCategoryDef in DefDatabase<ThingCategoryDef>.AllDefs)
                 thingCategoryDef.childThingDefs.RemoveAll(things.Contains);
@@ -194,11 +194,11 @@ namespace TheThirdAge
 
             RemoveStuffFromDatabase(typeof(DefDatabase<IncidentDef>), incidents.Cast<Def>());
 
-            
+
 
 
             DebugString.AppendLine("Replaced Ancient Asphalt Road / Ancient Asphalt Highway with Stone Road");
-            RoadDef[] targetRoads = {RoadDefOf.AncientAsphaltRoad, RoadDefOf.AncientAsphaltHighway};
+            RoadDef[] targetRoads = { RoadDefOf.AncientAsphaltRoad, RoadDefOf.AncientAsphaltHighway };
             RoadDef originalRoad = DefDatabase<RoadDef>.GetNamed("StoneRoad");
 
             List<string> fieldNames = AccessTools.GetFieldNames(typeof(RoadDef));
@@ -210,7 +210,7 @@ namespace TheThirdAge
             }
 
             DebugString.AppendLine("Special Hediff Removal List");
-            RemoveStuffFromDatabase(typeof(DefDatabase<HediffDef>), (hediffs = new[] {HediffDefOf.Gunshot}).Cast<Def>());
+            RemoveStuffFromDatabase(typeof(DefDatabase<HediffDef>), (hediffs = new[] { HediffDefOf.Gunshot }).Cast<Def>());
 
             DebugString.AppendLine("RaidStrategyDef Removal List");
             RemoveStuffFromDatabase(typeof(DefDatabase<RaidStrategyDef>),
@@ -223,7 +223,7 @@ namespace TheThirdAge
             //                type.GetMethod(name: "Reset")?.Invoke(obj: null, parameters: null);
 
             DebugString.AppendLine("ThingDef Removal List");
-            RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), (ThingDef[]) things);
+            RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), (ThingDef[])things);
 
             DebugString.AppendLine("ThingSetMaker Reset");
             ThingSetMakerUtility.Reset();
@@ -232,7 +232,7 @@ namespace TheThirdAge
             RemoveStuffFromDatabase(typeof(DefDatabase<TraitDef>),
                 //                                                                   { nameof(TraitDefOf.Prosthophobe), "Prosthophile" } ?
                 DefDatabase<TraitDef>.AllDefs
-                    .Where(td => new[] {nameof(TraitDefOf.BodyPurist), "Transhumanist"}.Contains(td.defName))
+                    .Where(td => new[] { nameof(TraitDefOf.BodyPurist), "Transhumanist" }.Contains(td.defName))
                     .Cast<Def>());
 
             DebugString.AppendLine("Designators Resolved Again");
@@ -252,6 +252,9 @@ namespace TheThirdAge
             DebugString.AppendLine("FactionDef Removal List");
             RemoveStuffFromDatabase(typeof(DefDatabase<FactionDef>),
                 DefDatabase<FactionDef>.AllDefs.Where(fd => !fd.isPlayer && fd.techLevel > MAX_TECHLEVEL).Cast<Def>());
+
+            DebugString.AppendLine("BackstoryDef Removal List");
+                BackstoryHandler.RemoveIncompatibleBackstories(DebugString);
 
             DebugString.AppendLine("MapGeneratorDef Removal List");
             DebugString.AppendLine("- GenStep_SleepingMechanoids");

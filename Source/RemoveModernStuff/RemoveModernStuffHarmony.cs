@@ -21,7 +21,7 @@ namespace TheThirdAge
             harmony.Patch(original: AccessTools.Method(type: typeof(PawnUtility), name: "IsTravelingInTransportPodWorldObject"),
                 prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(IsTravelingInTransportPodWorldObject)), postfix: null);
 
-            
+
             //Changes the starting date of RimWorld.
             harmony.Patch(AccessTools.Property(typeof(TickManager), "StartingYear").GetGetMethod(), null,
                 new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(StartingYear_PostFix)), null);
@@ -38,7 +38,7 @@ namespace TheThirdAge
                 name: nameof(RandomPermanentInjuryDamageTypePostfix)));
 
             foreach (Type type in typeof(ThingSetMaker).AllSubclassesNonAbstract())
-                harmony.Patch(original: AccessTools.Method(type: type, name: "Generate", parameters: new []{typeof(ThingSetMakerParams)}), prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(ItemCollectionGeneratorGeneratePrefix)), postfix: null);
+                harmony.Patch(original: AccessTools.Method(type: type, name: "Generate", parameters: new[] { typeof(ThingSetMakerParams) }), prefix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), name: nameof(ItemCollectionGeneratorGeneratePrefix)), postfix: null);
 
             IEnumerable<MethodInfo> mis = AgeInjuryUtilityNamesHandler();
             if (mis.Any())
@@ -47,18 +47,20 @@ namespace TheThirdAge
                 foreach (MethodInfo mi in mis)
                 {
                     harmony.Patch(original: mi,
-                                  prefix: null, 
-                                  postfix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony), 
+                                  prefix: null,
+                                  postfix: new HarmonyMethod(type: typeof(RemoveModernStuffHarmony),
                                                              name: nameof(RandomPermanentInjuryDamageTypePostfix)));
                 }
-            } else
+            }
+            else
             {
                 Log.Message("No AgeInjuryUtility found.");
             }
 
-            harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new []{typeof(PawnGenerationRequest)}), null, new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostGenerateCleanup)));
+            harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new[] { typeof(PawnGenerationRequest) }), null, new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostGenerateCleanup)));
             harmony.Patch(AccessTools.Method(typeof(TradeDeal), "AddToTradeables"), new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostCacheTradeables)), null);
-
+            harmony.Patch(AccessTools.Method(typeof(PawnBioAndNameGenerator), "TryGiveSolidBioTo"), new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(TryGiveSolidBioTo_PreFix)), null);
+            
         }
 
         public static bool PostCacheTradeables(Thing t)
@@ -106,15 +108,16 @@ namespace TheThirdAge
         {
             //Log.Message("Looking for AgeInjuryUtility...");
             return (from assembly in AppDomain.CurrentDomain.GetAssemblies()
-                                    from type in assembly.GetTypes()
-                                    from method in type.GetMethods(BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.FlattenHierarchy)
-                                    where method.Name == "RandomPermanentInjuryDamageType"
-                                    select method);
+                    from type in assembly.GetTypes()
+                    from method in type.GetMethods(BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.FlattenHierarchy)
+                    where method.Name == "RandomPermanentInjuryDamageType"
+                    select method);
         }
 
         public static void RandomPermanentInjuryDamageTypePostfix(ref DamageDef __result)
         {
-            if (__result == DamageDefOf.Bullet) {
+            if (__result == DamageDefOf.Bullet)
+            {
                 __result = DamageDefOf.Scratch;
                 //Log.Message("Hello from RandomOldInjuryDamageTypePostfix.\nI heard you don't like Gunshot, so I fixed it.");
             }
@@ -137,9 +140,17 @@ namespace TheThirdAge
                 return false;
             }
             // ReSharper disable once HeuristicUnreachableCode
-            #pragma warning disable 162
+#pragma warning disable 162
             return true;
-            #pragma warning restore 162
+#pragma warning restore 162
+        }
+
+        // No solid bios, to avoid conflicts.
+        public static bool TryGiveSolidBioTo_PreFix(Pawn pawn, string requiredLastName, List<string> backstoryCategories,
+            ref bool __result)
+        {
+            __result = false;
+            return false;
         }
     }
 }

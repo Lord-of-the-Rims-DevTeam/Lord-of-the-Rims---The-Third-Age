@@ -60,7 +60,13 @@ namespace TheThirdAge
             harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new[] { typeof(PawnGenerationRequest) }), null, new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostGenerateCleanup)));
             harmony.Patch(AccessTools.Method(typeof(TradeDeal), "AddToTradeables"), new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostCacheTradeables)), null);
             harmony.Patch(AccessTools.Method(typeof(PawnBioAndNameGenerator), "TryGiveSolidBioTo"), new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(TryGiveSolidBioTo_PreFix)), null);
+            harmony.Patch(AccessTools.Method(typeof(ThingSetMakerUtility), nameof(ThingSetMakerUtility.CanGenerate)), null, new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(ThingSetCleaner)));
             
+        }
+
+        public static void ThingSetCleaner(ThingDef thingDef, ref bool __result)
+        {
+            __result &= !RemoveModernStuff.things.Contains(thingDef);
         }
 
         public static bool PostCacheTradeables(Thing t)

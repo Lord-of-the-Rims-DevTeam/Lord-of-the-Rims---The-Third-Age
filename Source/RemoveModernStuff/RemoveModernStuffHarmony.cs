@@ -71,7 +71,7 @@ namespace TheThirdAge
 
         public static bool PostCacheTradeables(Thing t)
         {
-            return RemoveModernStuff.things.Contains(t.def);
+            return !RemoveModernStuff.things.Contains(t.def);
         }
 
         public static void PostGenerateCleanup(Pawn __result)

@@ -60,6 +60,7 @@ namespace TheThirdAge
             harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new[] { typeof(PawnGenerationRequest) }), null, new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostGenerateCleanup)));
             harmony.Patch(AccessTools.Method(typeof(TradeDeal), "AddToTradeables"), new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(PostCacheTradeables)), null);
             harmony.Patch(AccessTools.Method(typeof(PawnBioAndNameGenerator), "TryGiveSolidBioTo"), new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(TryGiveSolidBioTo_PreFix)), null);
+            harmony.Patch(AccessTools.Method(typeof(Page_SelectScenario), "ListScenariosOnListing"), new HarmonyMethod(typeof(RemoveModernStuffHarmony), nameof(ListScenariosOnListing_PreFix)), null);
             
         }
 
@@ -127,6 +128,15 @@ namespace TheThirdAge
         {
             if (!parms.techLevel.HasValue || parms.techLevel > RemoveModernStuff.MAX_TECHLEVEL)
                 parms.techLevel = RemoveModernStuff.MAX_TECHLEVEL;
+        }
+
+        // Token: 0x060030A8 RID: 12456 RVA: 0x00172878 File Offset: 0x00170C78
+        public static void ListScenariosOnListing_PreFix(Listing_Standard listing, ref IEnumerable<Scenario> scenarios)
+        {
+            scenarios = scenarios.Where(x =>
+                x.name != "Crashlanded" &&
+                x.name != "The Rich Explorer" &&
+                x.name != "Naked Brutality");
         }
 
         //No one travels in transport pods in the medieval times

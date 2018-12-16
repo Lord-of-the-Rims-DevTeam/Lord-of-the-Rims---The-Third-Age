@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainMenuBackgroundChanger.cs" />
     <Compile Include="BackstoryHandler.cs" />
     <Compile Include="Building_RottableFixer.cs" />
     <Compile Include="CompFireOverlayRotatable.cs" />

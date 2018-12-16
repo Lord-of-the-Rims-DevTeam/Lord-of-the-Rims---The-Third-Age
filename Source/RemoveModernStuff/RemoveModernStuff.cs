@@ -35,13 +35,13 @@ namespace TheThirdAge
             IEnumerable<ResearchProjectDef> projects =
                 DefDatabase<ResearchProjectDef>.AllDefs.Where(rpd => rpd.techLevel > MAX_TECHLEVEL);
 
-            things = DefDatabase<ThingDef>.AllDefs.Where(td =>
+            things = new HashSet<ThingDef>(DefDatabase<ThingDef>.AllDefs.Where(td =>
                 td.techLevel > MAX_TECHLEVEL ||
                 (td.researchPrerequisites?.Any(rpd => projects.Contains(rpd)) ?? false) || new[]
                 {
                     "Gun_Revolver", "VanometricPowerCell", "PsychicEmanator", "InfiniteChemreactor", "Joywire",
                     "Painstopper"
-                }.Contains(td.defName)).ToArray();
+                }.Contains(td.defName)));
 
             DebugString.AppendLine("RecipeDef Removal List");
             var recipeDefsToRemove = DefDatabase<RecipeDef>.AllDefs.Where(rd =>
@@ -223,7 +223,7 @@ namespace TheThirdAge
             //                type.GetMethod(name: "Reset")?.Invoke(obj: null, parameters: null);
 
             DebugString.AppendLine("ThingDef Removal List");
-            RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), (ThingDef[])things);
+            RemoveStuffFromDatabase(typeof(DefDatabase<ThingDef>), things.ToArray());
 
             DebugString.AppendLine("ThingSetMaker Reset");
             ThingSetMakerUtility.Reset();

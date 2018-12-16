@@ -12,7 +12,6 @@
     <pawnsPlural>villagers</pawnsPlural>
     <techLevel>Medieval</techLevel>
     <backstoryCategories>
-      <li>LotRTTA_Civil</li>
       <li>Civil</li>
     </backstoryCategories>
     <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>

@@ -58,15 +58,10 @@ public static class BackstoryHandler
                 string[] filteredWords = {"world", "planet", "vat", "robot", "organ",
                     "universe", "research", "midworld", "space", "galaxy", "star system",
                     "genetic", "communications", "gun", "ceti", "tech", "machine",
-                    "addiction", "starship", "pilot"};
+                    "addiction", "starship", "pilot", "coma", "napalm", "imperial"};
                 foreach (string subString in filteredWords)
                 {
-                    if (bsTitle.Contains(subString))
-                    {
-                        listOfBackstoriesToRemove.AppendLine(bsy.Key);
-                        break;
-                    }
-                    if (bsDesc.Contains(subString))
+                    if ((bsTitle + " " + bsDesc).Contains(subString))
                     {
                         listOfBackstoriesToRemove.AppendLine(bsy.Key);
                         break;

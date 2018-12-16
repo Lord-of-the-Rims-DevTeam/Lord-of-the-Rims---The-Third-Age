@@ -1,3 +1,7 @@
+0.21.0.0 (12-16-2018)
+========================
+Removes all non-Lore friendly backstories. Adds new backstories built by the community.
+
 0.20.0.1 (10-20-2018)
 ========================
 Added Fluffys Mod Manager support by adding the Manifest.xml file.

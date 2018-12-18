@@ -288,7 +288,7 @@
   <JecsTools.BackstoryDef>
     <defName>LotRTTA_NGuard</defName>
     <title>Night guard</title>
-    <baseDescription>[PAWN_nameDef] defended against the dangers of the night, so that the inhabitants of their village could sleep soundly at night. Due to a good share of boring nights, [PAWN_pronoun] was well-known among [PAWN_possessive] fellow guards for [PAWN_possessive] ability to hit sleeping birds using only [PAWN_possessive] silhouette. </baseDescription>
+    <baseDescription>[PAWN_nameDef] defended against the dangers of the night, so that the inhabitants of their village could sleep soundly at night. Due to a good share of boring nights, [PAWN_pronoun] was well-known among [PAWN_possessive] fellow guards for [PAWN_possessive] ability to hit sleeping birds using only [PAWN_possessive] silhouette.</baseDescription>
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Adulthood</slot>
@@ -575,7 +575,7 @@
   <JecsTools.BackstoryDef>
     <defName>LotRTTA_CAlchemist</defName>
     <title>Corrupt alchemist</title>
-    <baseDescription>[PAWN_nameDef] was a brilliant alchemist, if not one of the greatest among the free peoples of Middle-Earth. [PAWN_possessive] will helped heal many, until [PAWN_pronoun] came into conflict with dark forces. Those forces took [PAWN_objective] in the dark of night, and forced [PAWN_objective] to take an evil concoction that has corrupted [PAWN_objective] to [PAWN_possessive] core. </baseDescription>
+    <baseDescription>[PAWN_nameDef] was a brilliant alchemist, if not one of the greatest among the free peoples of Middle-Earth. [PAWN_possessive] will helped heal many, until [PAWN_pronoun] came into conflict with dark forces. Those forces took [PAWN_objective] in the dark of night, and forced [PAWN_objective] to take an evil concoction that has corrupted [PAWN_objective] to [PAWN_possessive] core.</baseDescription>
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Adulthood</slot>
@@ -1699,6 +1699,8 @@
   <JecsTools.BackstoryDef>
     <defName>LotRTTA_Escapee</defName>
     <title>Escaped criminal</title>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
     <baseDescription>[PAWN_nameDef] denies involvement in the crimes that brought about [PAWN_possessive] imprisonment in the dungeons. [PAWN_pronoun] escaped by tunnelling beneath the fort using a soup spoon.</baseDescription>
     <slot>Adulthood</slot>
     <workDisables>

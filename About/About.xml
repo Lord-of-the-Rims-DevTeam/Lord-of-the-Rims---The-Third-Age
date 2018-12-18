@@ -3,7 +3,7 @@
   <name>Lord of the Rims - The Third Age</name>
   <author>erdelf and Jecrell</author>
   <targetVersion>1.0.2059</targetVersion>
-  <description>0.21.0.0 (12-16-2018)
+  <description>0.21.0.1 (12-18-2018)
 
     Removes modern items.
 	Adds a blacksmith forge to forge steel.
@@ -19,6 +19,10 @@ Maaxar, Shibby Says, TheJagermeister, Cory Bonifay, Kiya Nicoll, Matt Harris, Pa
 ========================
 Changelog
 ========================
+0.21.0.1 (12-18-2018)
+========================
+Fixes the criminal backstory error
+
 0.21.0.0 (12-16-2018)
 ========================
 Removes all non-Lore friendly backstories. Adds new backstories built by the community.

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
   <identifier>LotR-TheThirdAge</identifier>
-  <version>0.21.0.0</version>
+  <version>0.21.0.1</version>
   <dependencies />
   <incompatibleWith />
   <loadBefore>

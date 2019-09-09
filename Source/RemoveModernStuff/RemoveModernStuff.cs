@@ -294,13 +294,20 @@ namespace TheThirdAge
         private static void giveApproppriateTechLevels()
         {
             DebugString.AppendLine("ElectricSmelter's tech level changed to Industrial");
-            ThingDef.Named("ElectricSmelter").techLevel = TechLevel.Industrial;
+
+            ThingDef def = ThingDef.Named("ElectricSmelter");
+            if(def != null)
+                def.techLevel = TechLevel.Industrial;
 
             DebugString.AppendLine("ElectricCrematorium's tech level changed to Industrial");
-            ThingDef.Named("ElectricCrematorium").techLevel = TechLevel.Industrial;
+            def = ThingDef.Named("ElectricCrematorium");
+            if (def != null)
+                def.techLevel = TechLevel.Industrial;
 
             DebugString.AppendLine("FueledSmithy's tech level changed to Industrial");
-            ThingDef.Named("FueledSmithy").techLevel = TechLevel.Industrial;
+            def = ThingDef.Named("FueledSmithy");
+            if (def != null)
+                def.techLevel = TechLevel.Industrial;
         }
 
         private static void RemoveStuffFromDatabase(Type databaseType, [NotNull] IEnumerable<Def> defs)

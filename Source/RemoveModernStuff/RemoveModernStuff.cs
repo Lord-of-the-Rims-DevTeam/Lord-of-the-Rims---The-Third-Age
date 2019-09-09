@@ -246,7 +246,7 @@ namespace TheThirdAge
                 DefDatabase<PawnKindDef>.AllDefs
                     .Where(pkd =>
                         (!pkd.defaultFactionType?.isPlayer ?? false) &&
-                        (pkd.race.techLevel > MAX_TECHLEVEL || pkd.defaultFactionType?.techLevel > MAX_TECHLEVEL))
+                        (pkd.race.techLevel > MAX_TECHLEVEL || pkd.defaultFactionType?.techLevel > MAX_TECHLEVEL) && !pkd.defName.EqualsIgnoreCase("Villager"))
                     .Cast<Def>());
 
             DebugString.AppendLine("FactionDef Removal List");
